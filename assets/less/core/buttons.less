@@ -1,0 +1,263 @@
+// All buttons without border-radius
+.btn {
+  border-radius: 0;
+
+  &:active,
+  &:focus,
+  &:active:focus {
+    outline: 0;
+  }
+}
+
+// Dark
+.btn-dark {
+  .button-variant(@btn-dark-color; @btn-dark-bg; @btn-dark-border);
+  font-family: Lato;
+  color: #fff;
+  font-size: 12px;
+  font-weight: @font-weight-normal;
+}
+
+.btn-border-blue {
+  .button-variant(@btn-border-blue-color; @btn-border-blue-bg; @btn-border-blue-border);
+  border-radius: 2px;
+  font-family: MuseoSans;
+  font-size: 11px;
+  line-height: 1.636;
+
+  &:hover {
+    background-color: darken(@btn-border-blue-bg, 5%);
+  }
+}
+
+.btn-border-green {
+  .button-variant(@btn-border-green-color; @btn-border-green-bg; @btn-border-green-border);
+  border-radius: 2px;
+  font-family: MuseoSans;
+  font-size: 11px;
+  line-height: 1.636;
+
+  &:hover {
+    background-color: darken(@btn-border-green-bg, 5%);
+  }
+}
+
+.btn-link-more {
+  .text-uppercase;
+  font-family: MuseoSans;
+  color: #2b1016;
+  font-size: 11px;
+  line-height: 1.091;
+  margin: 10px 0;
+
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+.btn.disabled {
+  cursor: default;
+  pointer-events: initial;
+}
+
+.btn-primary { background-color: @btn-primary-bg; }
+.btn-success-disabled { background-color: @brand-success;  }
+.btn-info             { background-color: @btn-info-bg;    }
+.btn-warning          { background-color: @btn-warning-bg; }
+
+/*******************
+* Awesome buttons
+*********************/
+
+/* Common structure */
+.btn-structure {
+  border     : none;
+  display    : inline-block;
+  font-weight: bold;
+  position   : relative;
+  top        : 0;
+  transition : box-shadow 0.1s linear, top 0.1s linear;
+}
+
+.btn-structure-on-active {
+    top: 3px;
+}
+
+/* Custom buttons */
+.btn-default {
+  &,
+  &:hover,
+  &:visited,
+  &:focus {
+    .btn-structure;
+    background-color: @btn-default-bg;
+    box-shadow      : 0px 3px 0px 0px #9B9798;
+    color           : darken(@gray, 35%);
+    text-shadow     : 0 1px 1px white;
+  }
+
+  &:active {
+    .btn-structure-on-active;
+    box-shadow: 0px 0px 0px 0px #9B9798;
+  }
+}
+
+.btn-danger {
+  &,
+  &:hover,
+  &:visited,
+  &:focus {
+    .btn-structure;
+    background-color: #D84242;
+    box-shadow      : 0px 3px 0px 0px #661414;
+    color           : white;
+    text-shadow     : 0 1px 1px #661414;
+  }
+
+  &:active {
+    .btn-structure-on-active;
+    box-shadow: 0px 0px 0px 0px #661414;
+  }
+}
+
+.btn-edit {
+  /* Gray style */
+  &,
+  &:hover,
+  &:visited,
+  &:focus {
+    .transition(all .1s ease-in-out);
+    .btn-structure;
+    background-color: @btn-default-bg;
+    color           : darken(@gray, 35%);
+    text-shadow     : 0 1px 1px white;
+  }
+
+  /* Turning green */
+  &:hover {
+    background-color: #7AAC44;
+    border          : 1px solid green;
+    color           : white;
+    text-shadow     : 0 1px 1px rgba(0, 0, 0, 0.4);
+  }
+
+  /* On click */
+  &:active {
+    .btn-structure-on-active;
+    box-shadow: 0px 0px 0px 0px #9B9798;
+  }
+}
+
+.btn-facebook {
+  &,
+  &:hover,
+  &:visited,
+  &:focus {
+    .btn-structure;
+    background-color: @facebook-color;
+    box-shadow      : 0px 3px 0px 0px #2F4175;
+    color           : white;
+    text-shadow     : 0 1px 1px #2F4175;
+  }
+
+  &:active {
+    .btn-structure-on-active;
+    box-shadow: 0px 0px 0px 0px #2F4175;
+  }
+
+  /* If has font-awesom icon inside the button */
+  .fa-facebook {
+    background-color: #3C5494;
+    border-radius   : 50%;
+    margin          : 0 0 0 6px;
+    padding         : 2px;
+    text-align      : center;
+    vertical-align  : middle;
+    width           : 20px;
+  }
+}
+
+.btn-facebook[disabled] {
+    &,
+    &:hover,
+    &:visited,
+    &:focus,
+    &:active {
+        opacity   : .5 !important;
+        top       : 0  !important;
+        box-shadow: 0px 3px 0px 0px #2F4175 !important;
+    }
+}
+
+.btn-success {
+  &,
+  &:hover,
+  &:visited,
+  &:focus {
+    .btn-structure;
+    background-color: #7AAC44;
+    box-shadow      : 0px 3px 0px 0px #618936;
+    color           : #456226;
+    text-shadow     : 0 1px 1px rgba(255, 255, 255, 0.4);
+  }
+
+  &:active {
+    .btn-structure-on-active;
+    box-shadow: 0px 0px 0px 0px #618936;
+  }
+}
+
+.btn-see-more {
+  .button-variant(@brand-primary; #fff; fade(@brand-primary, 75%));
+  .text-uppercase;
+  background-repeat: no-repeat;
+  background-position: 12px center;
+  padding-left: 30px;
+
+  &,
+  &:active {
+    background-image: url(../images/icons/more-sm.png);
+  }
+
+  &:active,
+  &:focus,
+  &:focus:hover,
+  &:hover {
+    background-color: #fafafa;
+  }
+
+  &.btn-lg {
+    background-position: 15px center;
+    padding-left: 40px;
+
+    &,
+    &:active {
+      background-image: url(../images/icons/more.png);
+    }
+  }
+
+  &.btn-sm {
+    background-position: 12px center;
+    padding-left: 30px;
+
+    &,
+    &:active {
+      background-image: url(../images/icons/more-sm.png);
+    }
+  }
+
+  &.btn-xs {
+    background-position: 12px center;
+    padding-left: 30px;
+
+    &,
+    &:active {
+      background-image: url(../images/icons/more-xs.png);
+    }
+  }
+}
+
+.btn-success-disabled { background-color: @brand-success;  }
+.btn-info             { background-color: @btn-info-bg;    }
+.btn-warning          { background-color: @btn-warning-bg; }
+.btn-danger           { background-color: @btn-danger-bg;  }

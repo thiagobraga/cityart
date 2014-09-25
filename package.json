@@ -1,0 +1,25 @@
+{
+  "name": "bptadvogados",
+  "version": "0.0.1",
+  "description": "Site da BPT Advogados",
+  "author": "Thiago Braga",
+  "repository": {
+    "type": "git",
+    "url": "git@gitlab.com:thiagobraga/bptadvogados.git"
+  },
+  "engines": {
+    "node": "0.8.x",
+    "npm": "1.1.x"
+  },
+  "devDependencies": {
+    "grunt": "*",
+    "grunt-browser-sync": "*",
+    "grunt-contrib-clean": "*",
+    "grunt-contrib-concat": "*",
+    "grunt-contrib-cssmin": "*",
+    "grunt-contrib-less": "*",
+    "grunt-contrib-uglify": "*",
+    "grunt-contrib-watch": "*",
+    "load-grunt-config": "*"
+  }
+}

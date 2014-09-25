@@ -1,0 +1,93 @@
+/**
+ * Thumbnail
+ */
+
+.thumbnail {
+  /* Common */
+  margin-bottom: 0 !important;
+  border: 1px solid #fff;
+  border-radius: 50%;
+  padding: 1px;
+  .box-shadow(0 0 1px darken(@gray, 20%));
+  .transition(none);
+
+  /* Icons */
+  &-facebook,
+  &-link,
+  &-link-small {
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+    z-index: 14;
+  }
+
+  /* Facebook icon */
+  &-facebook {
+    background-image: url(../images/icons/body-facebook-small.png);
+  }
+
+  /* Link icon */
+  &-link {
+    background-image: url(../images/icons/body-linked.png);
+    background-position: 50% 18px;
+  }
+
+  &-link-small {
+    background-image: url(../images/icons/body-linked-small.png);
+  }
+
+  /* Components */
+  &-bar-highlight,
+  &-user-highlight {
+    border-radius: 50%;
+    position: absolute;
+    z-index: 13;
+  }
+
+    // Background color
+  &-bar-highlight  {
+    background-color: rgba(0, 0, 0, .6);
+  }
+
+    // Aura color
+  &-user-highlight,
+  &-is-user {
+    .box-shadow(0 0 10px 0 @brand-warning );
+    background-color: rgba(255, 255, 255, .6);
+  }
+
+    // Aura color
+  &-friend-highlight {
+    .box-shadow(0 0 10px 0 @facebook-color ) !important;
+  }
+
+    // Squared mask
+  &-square {
+    border-radius: 0 !important;
+  }
+
+  &-square-highlight {
+    border-radius: 0 !important;
+    position: absolute;
+    z-index: 13;
+    background-color: rgba(0, 0, 0, .6);
+  }
+
+  &-inner-text {
+    color: #fff;
+    font-family: Raleway;
+    font-size: 12px;
+    font-weight: @font-weight-light;
+    line-height: 1.25;
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 33px;
+  }
+}
+
+.user-highlight-text {
+  font-weight: @font-weight-semi-bold !important;
+}

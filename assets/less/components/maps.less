@@ -1,0 +1,42 @@
+.map {
+  background: #e5e3df;
+  width:      100%;
+  height: 94px;
+}
+
+.map-lg {
+  /*height: 74vh;  Viewport-percentage (see: http://www.w3.org/TR/css3-values/#viewport-relative-lengths) */
+  /* note: 26vh refers to total header height */
+}
+
+.map-md {
+  height: 350px;
+}
+
+.map-sm {
+  height: 150px;
+}
+
+/*.map-xs {
+  height: 94px;
+}*/
+
+/*.map-transition {
+  .transition(height ease .4s);
+}*/
+
+.map-wrap {
+  height: 94px;
+  border-bottom: 1px solid @gray;
+  box-shadow: inset 0 -2px 4px rgba(0,0,0,.2);
+  overflow: hidden;
+  position: relative;
+}
+
+.btn-show-map {
+  bottom: 0;
+  position: absolute;
+  text-transform: uppercase;
+  width: 120px;
+  z-index: @zindex-popover;
+}

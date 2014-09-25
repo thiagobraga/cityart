@@ -1,0 +1,105 @@
+.panel-contact {
+  .panel-heading {
+    color: #2b1016;
+    font-family: MuseoSans;
+    font-size: 20px;
+    font-weight: @font-weight-light;
+    line-height: 18px;
+    padding: 20px;
+  }
+
+  .panel-body {
+    color: #2b1016;
+    font-family: Lato;
+    font-size: 14px;
+    font-weight: @font-weight-light;
+    line-height: 18px;
+    padding: 20px;
+  }
+
+  .list-group-item {
+    padding: 30px 20px;
+  }
+
+  .list-group-item-heading {
+    font-family: MuseoSans;
+    color: #2b1016;
+    font-size: 16px;
+    line-height: 18px;
+  }
+
+  .list-group-item-text {
+    font-family: Lato;
+    color: #2b1016;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 18px;
+  }
+}
+
+.panel-send-message {
+  .panel-body {
+    padding: 30px 20px;
+  }
+
+  .row-form {
+    margin-bottom: 20px;
+  }
+
+  .btn {
+    font-family: Lato;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 18px;
+    width: 100px;
+    height: 40px;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  input[type="number"],
+  textarea {
+    .box-shadow(none);
+    border-radius: 2px;
+    border: 1px solid #d5d9db;
+    color: #606060;
+    font-family: Lato;
+    font-size: 18px;
+    font-weight: @font-weight-normal;
+  }
+
+  .form-control {
+    .transition(all ease-in-out .05s);
+
+    &:hover,
+    &:focus {
+      background-color: lighten(#ffff00, 46%);
+      border-color: @gray-light;
+      margin-bottom: -(@pixels-input-hover / 2);
+      margin-top: -(@pixels-input-hover / 2);
+      box-shadow: 3px 3px 6px rgba(0,0,0,.15);
+    }
+  }
+
+  input[type="text"],
+  input[type="email"],
+  input[type="number"] {
+    height: @input-text-height;
+
+    &:hover,
+    &:focus {
+      height: @input-text-height + @pixels-input-hover;
+    }
+  }
+
+  textarea {
+    height: @textarea-form-height;
+
+    &:hover,
+    &:focus {
+      height: @textarea-form-height + @pixels-input-hover;
+      padding-top: 9px;
+    }
+  }
+}

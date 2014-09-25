@@ -1,0 +1,114 @@
+/* Carousel
+-------------------------------------------------- */
+.cycle-carousel-container {
+  background-color: #eee;
+  height: @carousel-container-height;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.cycle-carousel {
+  width: 100%;
+  position: static !important;
+}
+
+.cycle-carousel-item {
+  width: @carousel-width;
+  height: @carousel-height;
+  margin: 25px (@carousel-gutter / 2) 25px;
+  .transition(box-shadow ease .2s);
+
+  & > a {
+    display: block;
+    height: @carousel-height;
+
+    & > img {
+      width: @carousel-width;
+      height: @carousel-height;
+    }
+  }
+
+  &:hover {
+    .box-shadow(0 0 1px 4px @brand-warning);
+  }
+}
+
+.cycle-carousel-caption {
+  background-color: @gray-dark;
+  bottom: @carousel-caption-height / 2;
+  display: block;
+  position: absolute;
+  width: @carousel-width;
+  height: @carousel-caption-height;
+  z-index: 5;
+
+  a {
+    display: block;
+    padding: 10px 15px;
+    padding-right: 10px;
+
+    & > h4 {
+      color: #fff;
+      font-family: Lato;
+      font-size: 16px;
+      font-weight: @font-weight-normal;
+      line-height: 1;
+      margin: 0;
+      text-shadow: 0 1px 1px rgba(0,0,0,.4);
+    }
+
+    & > p {
+      color: #fff;
+      font-family: Lato;
+      font-size: 12px;
+      font-weight: @font-weight-light;
+      line-height: 1.1;
+      margin: 0;
+      text-shadow: 0 1px 1px rgba(0,0,0,.4);
+    }
+
+    & > span {
+      font-family: Lato;
+      font-size: 14px;
+      font-weight: @font-weight-extra-bold;
+      line-height: 30px;
+    }
+
+    & > img {
+      margin-left: 5px;
+      margin-top: -5px;
+    }
+  }
+}
+
+/* Cycle button previous, next
+-------------------------------------------------- */
+.cycle-carousel-button {
+  background-color: rgba(0,0,0,.7);
+  background-repeat: no-repeat;
+  border-radius: 50%;
+  cursor: pointer;
+  position: absolute;
+  top: 88px;
+  width: 60px;
+  height: 60px;
+  z-index: 10;
+  .transition(background-color ease .2s);
+
+  &:hover {
+    background-color: rgba(0,0,0,.9);
+  }
+}
+
+.cycle-carousel-prev {
+  background-image: url(../images/icons/cycle-prev.png);
+  background-position: 12px center;
+  left: 100px;
+}
+
+.cycle-carousel-next {
+  background-image: url(../images/icons/cycle-next.png);
+  background-position: 18px center;
+  right: 100px;
+}

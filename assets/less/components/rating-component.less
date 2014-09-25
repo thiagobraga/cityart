@@ -1,0 +1,126 @@
+/**
+ * Rating
+ */
+.rating-component {
+  width: 700px !important;
+
+  .modal-body {
+    overflow-y: scroll;
+  }
+}
+
+.check-success {
+  background: url(../images/icons/check.png) no-repeat;
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  line-height: 12px;
+  vertical-align: middle;
+
+  margin-top: 12px;
+}
+
+.component-success {
+  background-color: #dff0d8 !important;
+
+  a {
+    color: #3c763d !important;
+  }
+}
+
+.rating-component-points {
+  color: darken(@gray, 10%);
+  margin-right: 25px;
+  margin-top: 4px;
+}
+
+#rating-component {
+  .close {
+    margin-top: 9px;
+  }
+
+  /* Removing overflow that hides the .selectpickers */
+  .panel {
+    overflow: initial !important;
+  }
+
+  .modal-body {
+    overflow-y: initial !important;
+  }
+
+  .panel-group {
+    .panel-heading {
+      padding: 0;
+      margin: 0;
+
+      a {
+        color: @gray-dark;
+        display: block;
+        padding: 10px;
+        font-size: 12px;
+        line-height: 18px;
+      }
+
+      .fa {
+        margin-top: 3px;
+      }
+    }
+  }
+}
+
+/* Components 3 and 4 */
+#rating-component-3,
+#rating-component-4 {
+  a {
+    line-height: 34px;
+  }
+}
+
+/* Components 5 */
+#rating-component-5 {
+
+  /* Textbox */
+  #rating-component-menu-suggestion,
+  .tt-hint,
+  .twitter-typeahead {
+    font-size: @font-size-small;
+    line-height: 24px;
+    width: 100%;
+    height: 36px;
+    margin-bottom: 10px;
+  }
+
+  #rating-component-menu-suggestion:focus {
+    border: 1px solid @gray;
+  }
+
+  /* Link 'add comment?' */
+  #rating-component-add-comment {
+    line-height: 35px;
+    color: @green;
+  }
+
+  /* Textarea */
+  #insert-comment {
+    margin-bottom: 10px;
+  }
+}
+
+.label-menu-suggestion {
+    border-radius: @border-radius-small;
+    color: @brand-primary;
+    display: inline-block;
+    font-family: Lato;
+    font-size: 12px;
+    font-weight: @font-weight-light;
+    margin: 0 0 1px 4px;
+
+    padding: 4px;
+
+    background-color: #e5e5e5;
+}
+
+.remove-label {
+    margin: 0 0 0 10px;
+}
+

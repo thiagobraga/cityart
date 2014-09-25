@@ -1,0 +1,64 @@
+//
+// Responsive: Utility classes
+// --------------------------------------------------
+
+// Visibility utilities
+.visible-xxs,
+.visible-xs,
+.visible-sm,
+.visible-md,
+.visible-lg {
+  .responsive-invisibility();
+}
+
+.visible-xxs {
+  @media (max-width: @screen-xxs-max) {
+    .responsive-visibility();
+  }
+}
+.visible-xs {
+  @media (min-width: @screen-xs-min) and (max-width: @screen-xs-max) {
+    .responsive-visibility();
+  }
+}
+.visible-sm {
+  @media (min-width: @screen-sm-min) and (max-width: @screen-sm-max) {
+    .responsive-visibility();
+  }
+}
+.visible-md {
+  @media (min-width: @screen-md-min) and (max-width: @screen-md-max) {
+    .responsive-visibility();
+  }
+}
+.visible-lg {
+  @media (min-width: @screen-lg-min) {
+    .responsive-visibility();
+  }
+}
+
+.hidden-xxs {
+  @media (max-width: @screen-xxs-max) {
+    .responsive-invisibility();
+  }
+}
+.hidden-xs {
+  @media (min-width: @screen-xs-min) and (max-width: @screen-xs-max) {
+    .responsive-invisibility();
+  }
+}
+.hidden-sm {
+  @media (min-width: @screen-sm-min) and (max-width: @screen-sm-max) {
+    .responsive-invisibility();
+  }
+}
+.hidden-md {
+  @media (min-width: @screen-md-min) and (max-width: @screen-md-max) {
+    .responsive-invisibility();
+  }
+}
+.hidden-lg {
+  @media (min-width: @screen-lg-min) {
+    .responsive-invisibility();
+  }
+}

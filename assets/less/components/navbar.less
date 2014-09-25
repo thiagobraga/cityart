@@ -1,0 +1,306 @@
+// Navbar
+.navbar {
+  // Bootstrap only defines min-height
+  height: @navbar-height;
+  border: 0;
+  z-index: 1040;
+
+  .dropdown-menu {
+    border-radius: 3px !important;
+
+    // Arrow
+    &:before {
+      border-right: 7px solid transparent;
+      border-bottom: 7px solid #ccc;
+      border-left: 7px solid transparent;
+      border-bottom-color: rgba(0,0,0,.2);
+      content: '';
+      display: inline-block;
+      position: absolute;
+      top: -7px;
+      right: 11px;
+    }
+
+    &:after {
+      display: inline-block;
+      border-right: 6px solid transparent;
+      border-bottom: 6px solid #ffffff;
+      border-left: 6px solid transparent;
+      content: '';
+      position: absolute;
+      top: -6px;
+      right: 12px;
+    }
+
+    .panel-heading {
+      color: #050505;
+      background-color: #ffffff;
+      border-color: #ebe8e9;
+      padding: 10px 0 0;
+      margin: 0 20px;
+      text-shadow: 0 0 1px rgba(0,0,0,.25);
+
+      small {
+        margin-top: -2px;
+      }
+    }
+
+  }
+}
+
+.navbar-label-score {
+  background-color: transparent;
+  border: 1px solid #e1ba83;
+  border-radius: .25em;
+  color: #e1ba83;
+  float: left;
+  font-family: Lato;
+  font-size: @font-size-small;
+  font-weight: @font-weight-bold;
+  line-height: 18px;
+  margin: 0 15px 0 0;
+  padding: 0 6px 1px;
+}
+
+.navbar-default {
+  .navbar-brand {
+    color: #e1ba83;
+    font-family: OpenSans, sans-serif;
+    font-size: 24px;
+    font-weight: 300;
+    letter-spacing: 1px;
+    padding: 14px 15px;
+    text-shadow: 1px 0 5px rgba(0,0,0,.4);
+    position: relative;
+
+    // The stage of development (alpha, beta or final)
+    span {
+      color: @brand-warning;
+      font-family: Raleway;
+      font-size: 9px;
+      font-weight: @font-weight-medium;
+      padding: 1px 3px;
+      position: absolute;
+      bottom: 3px;
+      right: 13px;
+    }
+
+    &,
+    & span {
+      .transition(color ease .2s);
+    }
+
+    &:hover span {
+      color: #fff;
+    }
+  }
+
+  // TODO: Include in sprites
+  .add-bar {
+    background-image: url(../images/icons/navbar-add-bar.png);
+    background-position: 10px center;
+    background-repeat: no-repeat;
+    padding-left: 35px;
+  }
+
+  // TODO: Include in sprites
+  .report-bug {
+    background-image: url(../images/icons/navbar-bug.png);
+    background-position: 10px center;
+    background-repeat: no-repeat;
+    padding-left: 35px;
+  }
+
+  .navbar-nav {
+    & > li {
+      & > a {
+        height: @navbar-height;
+        line-height: 20px;
+      }
+
+      & > .navbar-marker {
+        background-image: url(../images/icons/navbar-marker.png);
+        background-repeat: no-repeat;
+        background-position: 10px center;
+        padding-left: 38px;
+      }
+
+      & > .navbar-login {
+        background-image: url(../images/icons/navbar-login.png);
+        background-repeat: no-repeat;
+        background-position: 10px center;
+        padding-left: 38px;
+      }
+    }
+
+    & > .dropdown.open {
+      & > .navbar-marker {
+        background-color: #190307;
+      }
+    }
+  }
+}
+
+.user {
+  & > a > img {
+    margin-right: 5px;
+    margin-top: -1px;
+    vertical-align: top;
+  }
+
+  .caret {
+    margin-left: 5px;
+  }
+}
+
+.user-points {
+  margin-bottom: 2px;
+}
+
+// TEMP
+.navbar-collapse ~ .tooltip {
+  position: absolute;
+  left: 55px !important;
+
+  .tooltip-inner {
+    background-color: @brand-warning;
+  }
+
+  &.top          .tooltip-arrow { border-top-color:    @brand-warning; }
+  &.top-left     .tooltip-arrow { border-top-color:    @brand-warning; }
+  &.top-right    .tooltip-arrow { border-top-color:    @brand-warning; }
+  &.right        .tooltip-arrow { border-right-color:  @brand-warning; }
+  &.left         .tooltip-arrow { border-left-color:   @brand-warning; }
+  &.bottom       .tooltip-arrow { border-bottom-color: @brand-warning; }
+  &.bottom-left  .tooltip-arrow { border-bottom-color: @brand-warning; }
+  &.bottom-right .tooltip-arrow { border-bottom-color: @brand-warning; }
+
+  .tooltip-arrow {
+    right: inherit;
+    left: 40%;
+  }
+
+  .tooltip-inner {
+    margin-left: 80px;
+  }
+}
+
+// The dropdown menu on large desktops
+@media (min-width: 768px) {
+  .navbar-nav.navbar-right:last-child {
+    margin-right: 0;
+  }
+}
+
+@media (max-width: @screen-xs-max) {
+  .navbar-nav {
+    & > li {
+      & > a {
+        padding-top: 16px;
+        padding-bottom: 16px;
+      }
+    }
+  }
+
+  .navbar-default {
+    .navbar-header,
+    .navbar-search {
+      float: left;
+    }
+
+    .navbar-search {
+      margin: 0;
+      margin-left: 15px;
+    }
+
+    .navbar-collapse {
+      background-color: @navbar-default-bg;
+      border-radius: 0 0 4px 4px;
+      box-shadow: -4px 4px 6px 2px rgba(0,0,0,.4);
+      clear: both;
+      float: right;
+      margin-right: 3px;
+      width: 260px;
+      .transition(height .1s);
+
+      .navbar-nav {
+        & > li {
+          & > a {
+            height: 40px;
+            line-height: 18px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+
+            &:hover {
+              background-color: lighten(@navbar-default-bg, 5%);
+            }
+          }
+
+          & > .navbar-marker {
+            background-position: 10px 7px;
+          }
+        }
+      }
+    }
+
+    .navbar-toggle {
+      color: #fff;
+
+      .option-icon {
+        display: block;
+        width: 14px;
+        height: 14px;
+      }
+
+      // When button is pressed
+      background-color: darken(@btn-primary-bg, 10%);
+      border: 0;
+      box-shadow: inset 1px 1px 4px rgba(0,0,0,.5);
+
+      &:hover {
+        background-color: darken(@btn-primary-bg, 12%);
+      }
+
+      // When button is not pressed
+      &.collapsed {
+        background-color: darken(@btn-primary-bg, 3%);
+        box-shadow: 1px 1px 4px rgba(0,0,0,.4);
+
+        &:hover {
+          background-color: darken(@btn-primary-bg, 5%);
+        }
+      }
+    }
+
+    .facebook-picture {
+      margin-right: 6px;
+    }
+
+    .add-bar {
+      background-position: 16px center;
+      padding-left: 45px;
+    }
+
+    .report-bug {
+      background-position: 16px center;
+      padding-left: 45px;
+    }
+
+    .fa-search {
+      font-size: 18px;
+      margin-left: 2px;
+      margin-right: 8px;
+    }
+
+    .fa-power-off {
+      font-size: 18px;
+      margin-left: 3px;
+      margin-right: 9px;
+    }
+
+    .divider {
+      height: 2px;
+      background-color: darken(@brand-primary, 9%);
+    }
+  }
+}

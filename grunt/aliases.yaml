@@ -1,0 +1,11 @@
+# Aliases used in grunt tasks
+# @author - Thiago Braga <thiago@institutosoma.org.br>
+
+default:
+  - 'clean'
+  - 'concat'
+  - 'uglify'
+  - 'less'
+  - 'cssmin'
+  - 'browserSync'
+  - 'watch'

@@ -1,0 +1,38 @@
+.change-lang {
+  & > a {
+    .text-center;
+    display: block;
+    height: 52px;
+    padding: 16px 10px 0 10px;
+  }
+
+  // Increase specificity
+  &.open&.open > a {
+    background-color: @navbar-default-bg;
+  }
+
+  /* Dropdown */
+  .dropdown-menu {
+    border-radius: 0;
+    padding: 0;
+    min-width: 105px;
+
+    /* Padding */
+    & > li > a {
+      padding: 6px 10px;
+    }
+  }
+}
+
+// Small phones
+@media (max-width: @screen-xxs-max) {
+  .change-lang {
+    .dropdown-menu {
+      min-width: 42px;
+
+      & > li > a {
+        padding-left: 10px;
+      }
+    }
+  }
+}
