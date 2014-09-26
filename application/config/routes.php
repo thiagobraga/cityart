@@ -1,6 +1,6 @@
 <?php
 
-defined('BASEPATH') OR exit('No direct script access allowed');
+defined('BASEPATH') || exit('No direct script access allowed');
 
 /*
 | -------------------------------------------------------------------------
@@ -42,7 +42,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 */
 
 $route['404_override']       = '';
-$route['default_controller'] = 'home';
+$route['default_controller'] = 'landing';
 
 
 /* End of file routes.php */
