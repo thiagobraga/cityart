@@ -11,7 +11,7 @@
 module.exports =
   development:
     files:
-      'assets/css/styles.min.css': 'assets/css/styles.css'
+      'assets/css/dist/styles.min.css': 'assets/css/dist/styles.css'
 
     options:
       keepSpecialComments: 0

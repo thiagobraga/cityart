@@ -11,4 +11,4 @@
 module.exports =
   styles:
     files:
-      'assets/css/styles.min.css': 'assets/less/styles.less'
+      'assets/css/dist/styles.css': 'assets/less/styles.less'

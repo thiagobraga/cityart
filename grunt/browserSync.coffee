@@ -13,8 +13,8 @@
 module.exports =
   bsFiles:
     src: [
-      'assets/css/dist/**/*.css'
-      'assets/js/dist/**/*.js'
+      'assets/css/dist/**/*.min.css'
+      'assets/js/dist/**/*.min.js'
       'assets/templates/**/*.hbs'
       'application/**/*.php'
     ]

@@ -14,7 +14,10 @@ module.exports =
     files: [
       'assets/js/src/**/*.js'
     ]
-    tasks: 'concat'
+    tasks: [
+      'concat'
+      'uglify'
+    ]
 
   less:
     files: 'assets/less/**/*.less'
