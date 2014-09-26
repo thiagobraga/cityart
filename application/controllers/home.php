@@ -44,13 +44,14 @@ class Home extends BPT_Advogados
      * Redireciona para o perfil
      *
      * Ao carregar o método principal da classe,
-     * redireciona para o perfil do usuário.
+     * redireciona para o perfil do u
+     * suário.
      *
      * @return {void}
      */
     public function index()
     {
-        var_dump($this->data);
+        $this->data->content = 'home/home';
         $this->load->view('template', $this->data);
     }
 
