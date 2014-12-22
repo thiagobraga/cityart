@@ -14,7 +14,6 @@
   "devDependencies": {
     "grunt": "*",
     "grunt-browser-sync": "*",
-    "grunt-contrib-clean": "*",
     "grunt-contrib-concat": "*",
     "grunt-contrib-cssmin": "*",
     "grunt-contrib-less": "*",

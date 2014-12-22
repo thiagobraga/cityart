@@ -58,22 +58,6 @@ Barpedia.Helpers.Scripts = (function () {
             doc.body.appendChild(js);
         },
 
-        loadJsWithCallback = function(src, callback) {
-            var script = document.createElement('script'),
-                loaded;
-            script.setAttribute('src', src);
-            if (callback) {
-              script.onreadystatechange = script.onload = function() {
-                if (!loaded) {
-                  callback();
-                }
-                loaded = true;
-              };
-            }
-            document.getElementsByTagName('head')[0].appendChild(script);
-          },
-
-
         /**
          * Load a Handlebars file template.
          *
@@ -114,8 +98,7 @@ Barpedia.Helpers.Scripts = (function () {
 
     return {
         loadJS: loadJs,
-        loadTemplate: loadTemplate,
-        loadJsWithCallback: loadJsWithCallback
+        loadTemplate: loadTemplate
     };
 
 }());

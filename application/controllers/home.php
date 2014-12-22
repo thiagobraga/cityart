@@ -37,7 +37,7 @@ defined('BASEPATH') || exit('No direct script access allowed');
  * @link      http://bptadvogados.com.br
  * @access    public
  */
-class Home extends BPT_Advogados
+class Home extends CityArt
 {
 
     /**

@@ -37,7 +37,7 @@ defined('BASEPATH') || exit('No direct script access allowed');
  * @link      http://barpedia.org
  * @access    public
  */
-class Styleguide extends BPT_Advogados
+class Styleguide extends CityArt
 {
 
     /**

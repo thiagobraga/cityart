@@ -12,6 +12,3 @@ module.exports =
   dist:
     files:
       'assets/js/dist/scripts.min.js': 'assets/js/dist/scripts.js'
-
-    options:
-      report: 'gzip'

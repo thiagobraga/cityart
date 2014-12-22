@@ -11,18 +11,23 @@
  * @type   {Object}
 ###
 module.exports =
-  bsFiles:
-    src: [
-      'assets/css/dist/**/*.min.css'
-      'assets/js/dist/**/*.min.js'
-      'assets/templates/**/*.hbs'
-      'application/**/*.php'
-    ]
+  files: [
+    'assets/css/src/**/*.css'
+    'assets/css/dist/**/*.css'
+    '!assets/css/dist/**/*.min.css'
+    'assets/js/dist/**/*.js'
+    '!assets/js/dist/**/*.min.js'
+    'assets/templates/**/*.hbs'
+    'application/**/*.php'
+    '!application/logs/**/*.php'
+    'index.php'
+  ]
 
   options:
-    proxy: 'bptadvogados'
-    host: 'bptadvogados'
-    port: 3020
+    logPrefix: 'CityArt'
+    proxy: 'cityart'
+    host: 'cityart'
+    port: 4040
     watchTask: true
     open: false
     notify: false

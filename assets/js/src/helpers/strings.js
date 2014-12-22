@@ -47,54 +47,6 @@ Barpedia.Helpers.Strings = (function () {
         },
 
         /**
-         * Evaluate the bar's rate to text message
-         *
-         * @param  {Int}    rate Bar's rate
-         * @return {String}
-         */
-        rateToText = function (rate) {
-            if (rate <= 2) {
-                return Barpedia.Helpers.I18n.get('rate_2');
-            }
-
-            if (rate < 3.5) {
-                return Barpedia.Helpers.I18n.get('rate_3');
-            }
-
-            if (rate < 4.5) {
-                return Barpedia.Helpers.I18n.get('rate_4');
-            }
-
-            if (rate <= 5) {
-                return Barpedia.Helpers.I18n.get('rate_5');
-            }
-        },
-
-        /**
-         * Returns the sprite's id class "/assets/less/beer32"
-         *
-         * @param  {Int}    rate Bar's rate
-         * @return {String}
-         */
-        rateClass = function (rate) {
-            if (rate <= 2) {
-                return 2;
-            }
-
-            if (rate < 3.5) {
-                return 3;
-            }
-
-            if (rate < 4.5) {
-                return 4;
-            }
-
-            if (rate <= 5) {
-                return 5;
-            }
-        },
-
-        /**
          * Method that count the characters typed in a textarea
          * and avoid user type new characters when limit is reached.
          *
@@ -115,8 +67,6 @@ Barpedia.Helpers.Strings = (function () {
 
     return {
         slice      : slice,
-        rateClass  : rateClass,
-        rateToText : rateToText,
         limitChars : limitChars
     };
 

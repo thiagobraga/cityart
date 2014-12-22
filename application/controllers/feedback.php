@@ -37,7 +37,7 @@ defined('BASEPATH') || exit('No direct script access allowed');
  * @link      http://barpedia.org
  * @access    public
  */
-class Feedback extends BPT_Advogados
+class Feedback extends CityArt
 {
     /**
      * Send a feedback email and save its information on db

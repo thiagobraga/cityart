@@ -6,7 +6,9 @@
 
     <body>
         <!-- CONTENT -->
-        <?php $this->load->view('landing/form') ?>
+        <div class="container">
+            <?php $this->load->view('landing/form') ?>
+        </div>
 
         <!-- SCRIPTS -->
         <?php $this->load->view('_template/scripts') ?>

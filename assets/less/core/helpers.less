@@ -1,0 +1,265 @@
+// Ul
+.no-style {
+  list-style-type: none;
+}
+
+// Image
+.no-image {
+  background-color: @gray-lighter;
+  text-align: center;
+
+  &,
+  a {
+    color: @gray;
+  }
+}
+
+// Divider
+.divider {
+  height: 1px;
+  margin: 9px 0;
+  overflow: hidden;
+  background-color: @gray-light;
+}
+
+.divider-vertical-right {
+  border-right: 1px solid @gray-lighter;
+}
+
+// Anchor
+.anchor {
+  display: block;
+  margin-top: -@navbar-height + 10;
+  padding-top: @navbar-height + 10;
+
+  &:hover {
+
+  }
+}
+
+// Font size
+.font {
+    &-size {
+        &-12 { font-size: 12px; }
+        &-18 { font-size: 18px; }
+    }
+}
+
+// Padding
+.padding {
+  &-15 { padding: 15px; }
+  &-20 { padding: 20px; }
+
+  &-right {
+    &-10 { padding-right: 10px; }
+    &-20 { padding-right: 20px; }
+    &-15 { padding-right: 15px; }
+    &-25 { padding-right: 25px; }
+    &-30 { padding-right: 30px; }
+    &-45 { padding-right: 45px;}
+  }
+
+  &-left {
+    &-5  { padding-left:  5px;}
+    &-15 { padding-left: 15px;}
+    &-20 { padding-left: 20px;}
+    &-30 { padding-left: 30px;}
+    &-45 { padding-left: 45px;}
+  }
+
+  &-top {
+    &-5  { padding-top: 5px;}
+    &-10 { padding-top: 10px }
+    &-15 { padding-top: 15px !important;}
+    &-20 { padding-top: 20px; }
+  }
+
+  &-bottom {
+    &-5  { padding-bottom: 5px !important;  }
+    &-8  { padding-bottom: 8px !important;  }
+    &-15 { padding-bottom: 15px !important;}
+    &-10 { padding-bottom: 10px !important; }
+    &-20 { padding-bottom: 20px !important; }
+  }
+}
+
+.no-padding {
+  padding: 0 !important;
+
+  &-right  { padding-right:  0 !important; }
+  &-left   { padding-left:   0 !important; }
+  &-top    { padding-top:    0 !important; }
+  &-bottom { padding-bottom: 0 !important; }
+}
+
+// Margin
+.margin {
+  &-10 { margin: 10px; }
+  &-15 { margin: 15px; }
+
+  &-bottom {
+    &-0  { margin-bottom: 0 !important; }
+    &-5  { margin-bottom: 5px;  }
+    &-10 { margin-bottom: 10px; }
+    &-20 { margin-bottom: 20px; }
+    &-30 { margin-bottom: 30px; }
+    &-40 { margin-bottom: 40px; }
+  }
+
+  &-top {
+    &-5  { margin-top:  5px; }
+    &-10 { margin-top: 10px; }
+    &-15 { margin-top: 15px; }
+    &-20 { margin-top: 20px; }
+    &-30 { margin-top: 30px; }
+    &-40 { margin-top: 40px; }
+    &-50 { margin-top: 50px; }
+  }
+
+  &-right {
+    &-5  { margin-right: 5px;  }
+    &-10 { margin-right: 10px; }
+    &-15 { margin-right: 15px; }
+    &-30 { margin-right: 30px; }
+  }
+
+  &-left {
+    &-10 { margin-left: 10px; }
+    &-15 { margin-left: 15px; }
+    &-20 { margin-left: 20px; }
+    &-30 { margin-left: 30px; }
+    &-50 { margin-left: 50px; }
+  }
+}
+
+.no-margin {
+  margin: 0 !important;
+
+  &-top    { margin-top:    0 !important; }
+  &-bottom { margin-bottom: 0 !important; }
+  &-right  { margin-right:  0 !important; }
+  &-left   { margin-left:   0 !important; }
+}
+
+// Position
+.position {
+  &-bottom,
+  &-right { position: absolute; }
+
+  &-bottom { bottom: 0; }
+  &-right  { right:  0; }
+}
+
+// Border
+.no-border {
+  border: 0 !important;
+}
+
+// Border Radius
+.border-radius-50 {
+  border-radius: 50%;
+}
+
+// Box Shadow
+.no-box-shadow {
+  box-shadow: none !important;
+}
+
+.img-shadow {
+  box-shadow: 1px 1px 4px rgba(0,0,0,.4);
+}
+
+// Opacity
+.opacity {
+  &-10  { opacity: .1; }
+}
+
+.no-opacity {
+  opacity: 0;
+}
+
+// Block Center
+.block-center {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+// Remove display:block
+.display-inline {
+  display: inline;
+}
+
+// Text
+.text-uppercase {
+  text-transform: uppercase;
+}
+
+// Cursor
+.cursor-default {
+  cursor: default;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+// Transition
+.transition {
+  &-200 { .transition(all ease .2s); }
+  &-400 { .transition(all ease .4s); }
+}
+
+.no-transition {
+  .transition(none);
+}
+
+// PHP Xdebug
+.xdebug-var-dump {
+  width: 100%;
+  z-index: 2000;
+  box-shadow: 10px 10px 20px 2px rgba(0,0,0,.5);
+
+  small {
+    display: inline !important;
+  }
+}
+
+pre {
+  border-radius: 0;
+  position: relative;
+  z-index: 2000;
+}
+
+// Width
+.width {
+  &-40  { width: 40px;  }
+  &-50  { width: 50px;  }
+  &-60  { width: 60px;  }
+  &-70  { width: 70px;  }
+  &-80  { width: 80px;  }
+  &-90  { width: 90px;  }
+}
+
+.full-width {
+  width: 100%;
+}
+
+// Height
+.min-height {
+  &-60 {
+    min-height: 60px;
+  }
+}
+
+// Display
+.display-table {
+  display: table;
+}
+
+// Color
+.color-white {
+  &,
+  &:hover {
+    color: white;
+  }
+}

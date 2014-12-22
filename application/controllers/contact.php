@@ -37,7 +37,7 @@ defined('BASEPATH') || exit('No direct script access allowed');
  * @link      http://barpedia.org
  * @access    public
  */
-class Contact extends BPT_Advogados
+class Contact extends CityArt
 {
 
     public function index()
