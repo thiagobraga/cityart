@@ -1,4 +1,3 @@
-BPT Advogados
-=============
+# CityArt | Press & Web
 
 Site da BPT Advogados.
