@@ -1,0 +1,19 @@
+$gradient-start:  #2b2b2b;
+$gradient-finish: #1b1b1b;
+
+body {
+  background: $gradient-finish;
+  -webkit-font-smoothing: antialiased;
+  -webkit-overflow-scrolling: touch;
+}
+
+header {
+  .container {
+    @include radial-gradient($gradient-start, $gradient-finish, center, 200px);
+    border-bottom: 4px solid transparent;
+    height: 228px;
+    padding-top: 65px;
+  }
+
+  border-bottom: $gradient-finish;
+}

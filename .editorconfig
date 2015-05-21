@@ -16,6 +16,9 @@ trim_trailing_whitespace = false
 [*.less]
 indent_size = 2
 
+[*.scss]
+indent_size = 2
+
 [*.yaml]
 indent_size = 2
 

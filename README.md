@@ -1,3 +1,3 @@
 # CityArt | Press & Web
 
-Site da BPT Advogados.
+The CityArt site repository.

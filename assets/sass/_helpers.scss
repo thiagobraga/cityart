@@ -1,0 +1,51 @@
+.no-padding {
+  padding: 0;
+}
+
+.no-margin {
+  margin: 0;
+}
+
+.no-border {
+  border: 0;
+}
+
+.no-box-shadow {
+  box-shadow: none;
+}
+
+.img-shadow {
+  box-shadow: 1px 1px 4px rgba(0,0,0,.4);
+}
+
+.no-opacity {
+  opacity: 0;
+}
+
+.full-width {
+  width: 100%;
+}
+
+// Block Center
+.block-center {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+// Cursor
+.cursor-default {
+  cursor: default;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+// Display
+.display-inline {
+  display: inline;
+}
+
+.display-table {
+  display: table;
+}
