@@ -28,19 +28,6 @@ Barpedia.Core.Behavior = (function () {
     var
 
         /**
-         * Define o comportamento padrão das requisições Ajax.
-         * TODO: Traduzir
-         *
-         * @return {void}
-         */
-        ajaxDefaultBehavior = (function () {
-            $.ajaxSetup({
-                dataType: 'json',
-                type: 'post'
-            });
-        }()),
-
-        /**
          * jQuery preventDefault
          *
          * Remove a ação padrão ao clicar em links e botões,
@@ -51,8 +38,13 @@ Barpedia.Core.Behavior = (function () {
          * @return {void}
          */
         preventDefaultAction = (function () {
-            var anchor = $('a[href="#"], button[type="submit"], input[type="button"]');
-            anchor.on('click', function (event) {
+            var selectors = [
+                'a[href="#"]',
+                'button[type="submit"]',
+                'input[type="button"]'
+            ].join(', ');
+
+            $(selectors).on('click', function (event) {
                 event.preventDefault();
             });
         }());

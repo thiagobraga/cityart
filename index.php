@@ -22,7 +22,7 @@ switch ($_SERVER['SERVER_NAME']) {
 case 'cityart.com.br':
     define('ENVIRONMENT', 'production');
 break;
-case 'testing.cityart.com.br':
+case 'cityart.thiagobraga.org':
     define('ENVIRONMENT', 'testing');
 break;
 default:

@@ -1,9 +1,13 @@
+/**
+ * Gulpfile for CityArt project.
+ */
 var gulp         = require('gulp'),
     sass         = require('gulp-sass'),
     autoprefixer = require('gulp-autoprefixer'),
     browserSync  = require('browser-sync'),
     reload       = browserSync.reload,
-    paths        = {
+
+    paths = {
         styles: {
             src:   'assets/sass',
             files: 'assets/sass/**/*.scss',
@@ -14,10 +18,10 @@ var gulp         = require('gulp'),
         browserSync: [
             '!assets/css/dist/**/*.min.css',
             '!assets/js/dist/**/*.min.js',
-            '!app/logs/**/*.php',
+            '!application/logs/**/*.php',
             'assets/css/dist/**/*.css',
             'assets/js/dist/**/*.js',
-            'app/**/*.php',
+            'application/**/*.php',
             'index.php'
         ]
     };
@@ -26,7 +30,6 @@ var gulp         = require('gulp'),
 gulp.task('browser-sync', function () {
     browserSync({
         logPrefix: 'CityArt',
-        proxy:     'cityart',
         host:      'cityart',
         files:     paths.browserSync,
         port:      4040,
