@@ -1,26 +1,71 @@
+// Variables
+// =======================================
 $gradient-start:  #fff;
 $gradient-finish: #aa4c3b;
 
+
+// Body styles
+// =======================================
 body {
-  background: #4B4B4D;
-  -webkit-font-smoothing: antialiased;
+  background:                 #4b4b4d;
+  padding-top:                $navbar-height;
+  -webkit-font-smoothing:     antialiased;
   -webkit-overflow-scrolling: touch;
-  padding-top: $navbar-height;
 }
 
+
+// Header definitions
+// =======================================
 header {
   .container {
-    background: #ef8a20; /* Old browsers */
-    background: -moz-radial-gradient(center, ellipse cover,  #ef8a20 0%, #f08c1d 5%, #f48e20 6%, #f3921f 16%, #f7921e 17%, #f8931f 22%, #f6961e 23%, #f79a21 28%, #fa9a22 29%, #f89c1f 34%, #f5a021 38%, #f6a122 39%, #fba325 40%, #f8a525 44%, #fba325 46%, #f9a626 51%, #f9a423 53%, #f9a825 56%, #fba625 57%, #fbaa27 63%, #f7a825 85%, #faa725 86%, #f8a324 96%, #fca524 97%, #fba423 100%); /* FF3.6+ */
-    background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,#ef8a20), color-stop(5%,#f08c1d), color-stop(6%,#f48e20), color-stop(16%,#f3921f), color-stop(17%,#f7921e), color-stop(22%,#f8931f), color-stop(23%,#f6961e), color-stop(28%,#f79a21), color-stop(29%,#fa9a22), color-stop(34%,#f89c1f), color-stop(38%,#f5a021), color-stop(39%,#f6a122), color-stop(40%,#fba325), color-stop(44%,#f8a525), color-stop(46%,#fba325), color-stop(51%,#f9a626), color-stop(53%,#f9a423), color-stop(56%,#f9a825), color-stop(57%,#fba625), color-stop(63%,#fbaa27), color-stop(85%,#f7a825), color-stop(86%,#faa725), color-stop(96%,#f8a324), color-stop(97%,#fca524), color-stop(100%,#fba423)); /* Chrome,Safari4+ */
-    background: -webkit-radial-gradient(center, ellipse cover,  #ef8a20 0%,#f08c1d 5%,#f48e20 6%,#f3921f 16%,#f7921e 17%,#f8931f 22%,#f6961e 23%,#f79a21 28%,#fa9a22 29%,#f89c1f 34%,#f5a021 38%,#f6a122 39%,#fba325 40%,#f8a525 44%,#fba325 46%,#f9a626 51%,#f9a423 53%,#f9a825 56%,#fba625 57%,#fbaa27 63%,#f7a825 85%,#faa725 86%,#f8a324 96%,#fca524 97%,#fba423 100%); /* Chrome10+,Safari5.1+ */
-    background: -o-radial-gradient(center, ellipse cover,  #ef8a20 0%,#f08c1d 5%,#f48e20 6%,#f3921f 16%,#f7921e 17%,#f8931f 22%,#f6961e 23%,#f79a21 28%,#fa9a22 29%,#f89c1f 34%,#f5a021 38%,#f6a122 39%,#fba325 40%,#f8a525 44%,#fba325 46%,#f9a626 51%,#f9a423 53%,#f9a825 56%,#fba625 57%,#fbaa27 63%,#f7a825 85%,#faa725 86%,#f8a324 96%,#fca524 97%,#fba423 100%); /* Opera 12+ */
-    background: -ms-radial-gradient(center, ellipse cover,  #ef8a20 0%,#f08c1d 5%,#f48e20 6%,#f3921f 16%,#f7921e 17%,#f8931f 22%,#f6961e 23%,#f79a21 28%,#fa9a22 29%,#f89c1f 34%,#f5a021 38%,#f6a122 39%,#fba325 40%,#f8a525 44%,#fba325 46%,#f9a626 51%,#f9a423 53%,#f9a825 56%,#fba625 57%,#fbaa27 63%,#f7a825 85%,#faa725 86%,#f8a324 96%,#fca524 97%,#fba423 100%); /* IE10+ */
-    background: radial-gradient(ellipse at center,  #ef8a20 0%,#f08c1d 5%,#f48e20 6%,#f3921f 16%,#f7921e 17%,#f8931f 22%,#f6961e 23%,#f79a21 28%,#fa9a22 29%,#f89c1f 34%,#f5a021 38%,#f6a122 39%,#fba325 40%,#f8a525 44%,#fba325 46%,#f9a626 51%,#f9a423 53%,#f9a825 56%,#fba625 57%,#fbaa27 63%,#f7a825 85%,#faa725 86%,#f8a324 96%,#fca524 97%,#fba423 100%); /* W3C */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ef8a20', endColorstr='#fba423',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
-    //  background: #373435 url(../../images/backgrounds/header.jpg) no-repeat center center;
+    height:              300px;
+    background-color:    transparent;
+    background-image:    url(/assets/images/backgrounds/buildings.png), url(/assets/images/backgrounds/header.jpg);
+    background-repeat:   no-repeat;
+    background-position: center bottom, center center;
   }
 
   border-bottom: $gradient-finish;
-  height: 300px;
+}
+
+
+// Logo
+// =======================================
+.logo {
+  background: transparent
+    url(/assets/images/logo/logo-black-lg.png)
+    no-repeat
+    center center;
+
+  display: block;
+  width:   300px;
+  height:  107px;
+  margin:  60px;
+}
+
+.navbar-brand {
+  background: transparent
+    url(/assets/images/logo/logo-orange-sm.png)
+    no-repeat
+    center center;
+
+  width:  130px;
+  height: $navbar-height;
+}
+
+
+// Bootstrap grid override
+// =======================================
+.container {
+  @include container-fixed;
+
+  @media (min-width: $screen-sm-min) {
+    width: $container-sm;
+  }
+  @media (min-width: $screen-md-min) {
+    width: $container-md;
+  }
+  @media (min-width: $screen-lg-min) {
+    width: $container-md;
+  }
 }
