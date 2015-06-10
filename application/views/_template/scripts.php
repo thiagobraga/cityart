@@ -10,7 +10,7 @@ if (ENVIRONMENT === 'development') {
 
     if ($file_headers) { ?>
         <script id="__bs_script__">
-            document.write("<script async src='//HOST:4040/browser-sync/browser-sync-client.1.9.2.js'><\/script>".replace(/HOST/g, location.hostname).replace(/PORT/g, location.port));
+            document.write('<script async src="//HOST:4040/browser-sync/browser-sync-client.1.9.1.js"><\/script>'.replace(/HOST/g, location.hostname).replace(/PORT/g, location.port));
         </script>
     <?php }
 } ?>
