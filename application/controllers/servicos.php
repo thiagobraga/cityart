@@ -1,11 +1,10 @@
 <?php
 
 /**
- * home.php
+ * Servicos.php
  *
- * Classes, métodos e propriedades do controller user.
- * A classe Home estende a classe MY_Controller.
- * Funções utilizadas para login com Facebook.
+ * Classes, métodos e propriedades do controller Servicos.
+ * A classe Servicos estende a classe MY_Controller.
  *
  * PHP version 5
  *
@@ -15,45 +14,37 @@
  * the PHP License and are unable to obtain it through the web, please
  * send a note to license@php.net so we can mail you a copy immediately.
  *
- * @category  Advocacia
- * @package   BPT Advogados
+ * @category  Geoprocessamento de dados
+ * @package   Barpedia
+ * @author    Matheus Cesario <matheus@institutosoma.org.br>
  * @author    Thiago Braga <thiago@institutosoma.org.br>
  * @copyright 1997-2005 The PHP Group
  * @license   http://www.php.net/license/3_01.txt  PHP License 3.01
- * @version
- * @link      http://bptadvogados.com.br
+ * @version   GIT: $Id$
+ * @link      http://barpedia.org
  * @since     File available since Release 0.0.0
  */
 
 defined('BASEPATH') || exit('No direct script access allowed');
 
 /**
- * Home
+ * Servicos
  *
- * @category  Advocacia
- * @package   BPT Advogados
- * @author    Thiago Braga <contato@thiagobraga.org>
+ * @category  Geoprocessamento de dados
+ * @package   Barpedia
+ * @author    Matheus Cesario <matheus@institutosoma.org.br>
  * @license   http://www.php.net/license/3_01.txt  PHP License 3.01
- * @link      http://bptadvogados.com.br
+ * @link      http://barpedia.org
  * @access    public
  */
-class Home extends CityArt
+class Servicos extends CityArt
 {
 
-    /**
-     * Redireciona para o perfil
-     *
-     * Ao carregar o método principal da classe,
-     * redireciona para o perfil do u
-     * suário.
-     *
-     * @return {void}
-     */
     public function index()
     {
         $this->data = array_merge($this->data, array(
-            'page'    => 'Página Inicial',
-            'content' => 'home/home'
+            'page'    => 'Nossos Serviços',
+            'content' => 'servicos/servicos'
         ));
 
         CityArt::setTitle($this->data['title'] . ' | ' . $this->data['page']);
@@ -62,5 +53,5 @@ class Home extends CityArt
 
 }
 
-/* End of file usuarios.php */
-/* Location: ./application/controllers/users.php */
+/* End of file bares.php */
+/* Location: ./application/controllers/bares.php */

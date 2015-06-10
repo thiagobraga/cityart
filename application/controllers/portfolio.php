@@ -1,10 +1,10 @@
 <?php
 
 /**
- * Contact.php
+ * Portfolio.php
  *
- * Classes, métodos e propriedades do controller Contact.
- * A classe Contact estende a classe MY_Controller.
+ * Classes, métodos e propriedades do controller Portfolio.
+ * A classe Portfolio estende a classe MY_Controller.
  *
  * PHP version 5
  *
@@ -28,7 +28,7 @@
 defined('BASEPATH') || exit('No direct script access allowed');
 
 /**
- * Contact
+ * Portfolio
  *
  * @category  Geoprocessamento de dados
  * @package   Barpedia
@@ -37,32 +37,20 @@ defined('BASEPATH') || exit('No direct script access allowed');
  * @link      http://barpedia.org
  * @access    public
  */
-class Contact extends CityArt
+class Portfolio extends CityArt
 {
 
     public function index()
     {
-        // Getting cookie and loading language
-        $this->data->locale = $this->setLang();
+        $this->data = array_merge($this->data, array(
+            'page'    => 'Portfolio',
+            'content' => 'portfolio/portfolio'
+        ));
 
-        // User session
-        // Valor relacionado à nota do bar
-        // O usuário precisa estar logado
-        if ($this->session->userdata('ainc_id_usuario') != null) {
-            $ainc_id_usuario = $this->session->userdata('ainc_id_usuario');
-        }
+        $title = $this->data['title'] . ' | ' . $this->data['page'];
+        CityArt::setTitle($title);
 
-        // Carregando dados da session
-        $this->data->session = $this->session->all_userdata();
-        $this->data->city    = $this->cidades_model->selecionarCidade($this->session->userdata('inte_last_place'));
-        $this->data->page    = '{{contact_page}}';
-        $this->data->content = 'contact/contact';
-
-        $this->setTitle('Barpedia.org | ' . $this->data->page . ' | {{head_title}}');
-        $this->setDescription('{{head_description}}');
-        $this->loadJs(array('js/dist/contact.min'));
-
-        $this->parser->parse('template', $this->data);
+        $this->load->view('template', $this->data);
     }
 
 }

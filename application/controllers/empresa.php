@@ -1,10 +1,10 @@
 <?php
 
 /**
- * home.php
+ * empresa.php
  *
  * Classes, métodos e propriedades do controller user.
- * A classe Home estende a classe MY_Controller.
+ * A classe Empresa estende a classe MY_Controller.
  * Funções utilizadas para login com Facebook.
  *
  * PHP version 5
@@ -28,7 +28,7 @@
 defined('BASEPATH') || exit('No direct script access allowed');
 
 /**
- * Home
+ * Empresa
  *
  * @category  Advocacia
  * @package   BPT Advogados
@@ -37,7 +37,7 @@ defined('BASEPATH') || exit('No direct script access allowed');
  * @link      http://bptadvogados.com.br
  * @access    public
  */
-class Home extends CityArt
+class Empresa extends CityArt
 {
 
     /**
@@ -52,8 +52,8 @@ class Home extends CityArt
     public function index()
     {
         $this->data = array_merge($this->data, array(
-            'page'    => 'Página Inicial',
-            'content' => 'home/home'
+            'page'    => 'A Empresa',
+            'content' => 'empresa/empresa'
         ));
 
         CityArt::setTitle($this->data['title'] . ' | ' . $this->data['page']);
