@@ -16,10 +16,10 @@
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse navbar-ex1-collapse">
             <ul class="nav navbar-nav">
-                <li><a href="<?php echo base_url() ?>">A Empresa</a></li>
-                <li><a href="<?php echo base_url() ?>">Serviços</a></li>
-                <li><a href="<?php echo base_url() ?>">Portfolio</a></li>
-                <li><a href="<?php echo base_url() ?>">Contato</a></li>
+                <li><a href="<?php echo base_url('empresa') ?>">A Empresa</a></li>
+                <li><a href="<?php echo base_url('servicos') ?>">Serviços</a></li>
+                <li><a href="<?php echo base_url('portfolio') ?>">Portfolio</a></li>
+                <li><a href="<?php echo base_url('contato') ?>">Contato</a></li>
             </ul>
         </div><!-- /.navbar-collapse -->
     </div>
