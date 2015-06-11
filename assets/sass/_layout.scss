@@ -40,7 +40,11 @@ header {
   display: block;
   width:   300px;
   height:  107px;
-  margin:  60px;
+  margin:  60px 20px;
+}
+
+.navbar {
+  @extend .text-uppercase;
 }
 
 .navbar-brand {
