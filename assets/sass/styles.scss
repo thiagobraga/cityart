@@ -1,8 +1,11 @@
+$icon-font-path: "../../../bower_components/bootstrap-sass-official/assets/fonts/bootstrap/" !default;
+$fa-font-path:   "../../../bower_components/font-awesome/fonts" !default;
+
 @import '../../bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap';
 @import '../../bower_components/font-awesome/scss/font-awesome';
 
-@import 'variables',
-  'mixins',
-  'type',
-  'helpers',
-  'layout';
+@import 'variables';
+@import 'mixins';
+@import 'type';
+@import 'helpers';
+@import 'layout';

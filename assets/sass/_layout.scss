@@ -40,7 +40,7 @@ header {
   display: block;
   width:   300px;
   height:  107px;
-  margin:  60px 20px;
+  margin:  60px 10px;
 }
 
 .navbar {
@@ -53,8 +53,9 @@ header {
     no-repeat
     center center;
 
-  width:  130px;
-  height: $navbar-height;
+  width:   154px;
+  height:  $navbar-height;
+  padding: 15px 25px;
 }
 
 

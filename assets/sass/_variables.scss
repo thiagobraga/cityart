@@ -18,12 +18,6 @@ $brand-danger:           #e74c3c;
 $brand-primary-inverted: #f8f0e0;
 $brand-success-dark:     #086d37;
 
-$green                 : #008000;
-$red                   : #FF0000;
-$facebook-color        : #4c69ba;
-
-$on-hover              : #f0edee;
-
 
 //== Scaffolding
 //
@@ -39,14 +33,11 @@ $link-hover-color:      $gray-darker;
 //
 //## Specify custom locations of the include Glyphicons icon font. Useful for those including Bootstrap via Bower.
 
-$icon-font-path:          "../bower/bootstrap/fonts/";
 $icon-font-name:          "glyphicons-halflings-regular";
 $icon-font-svg-id:        "glyphicons_halflingsregular";
 
 // Typography
 // -------------------------
-
-$fa-font-path:   "../bower/font-awesome/fonts";
 
 $font-family-sans-serif:  Lato, "Helvetica Neue", Helvetica, Arial, sans-serif;
 $font-family-serif:       Georgia, "Times New Roman", Times, serif;
