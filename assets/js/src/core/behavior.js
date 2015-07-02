@@ -50,7 +50,6 @@ Barpedia.Core.Behavior = (function () {
         }());
 
     return {
-        ajaxDefaultBehavior: ajaxDefaultBehavior,
         preventDefaultAction: preventDefaultAction
     };
 

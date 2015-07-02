@@ -21,6 +21,21 @@
                 <li><a href="<?php echo base_url('portfolio') ?>">Portfolio</a></li>
                 <li><a href="<?php echo base_url('contato') ?>">Contato</a></li>
             </ul>
+
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="http://facebook.com/cityart">
+                    <span class="fa fa-facebook text-warning"></span>
+                </a></li>
+                <li><a href="http://pinterest.com/cityart">
+                    <span class="fa fa-pinterest-p text-warning"></span>
+                </a></li>
+                <li><a href="http://behance.com/cityart">
+                    <span class="fa fa-behance text-warning"></span>
+                </a></li>
+                <li><a href="mailto:contato@cityart.com.br">
+                    <span class="fa fa-envelope-o text-warning"></span>
+                </a></li>
+            </ul>
         </div><!-- /.navbar-collapse -->
     </div>
 </nav>

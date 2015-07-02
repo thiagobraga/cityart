@@ -18,6 +18,7 @@ body {
 // =======================================
 header {
   .container {
+    box-shadow:   0 0 2px rgba(0,0,0,.5);
     height:              300px;
     background-color:    transparent;
     background-image:    url(/assets/images/backgrounds/buildings.png), url(/assets/images/backgrounds/header.jpg);
@@ -26,36 +27,71 @@ header {
   }
 
   border-bottom: $gradient-finish;
+
+  .services {
+    margin-top: 50px;
+
+    p {
+      color:         #222;
+      font-size:     28px;
+      line-height:   .8;
+      margin-bottom: 8px;
+    }
+  }
 }
 
 
 // Logo
 // =======================================
 .logo {
+  display: block;
+  width:   300px;
+  height:  107px;
+  margin:  50px 0;
+
   background: transparent
     url(/assets/images/logo/logo-black-lg.png)
     no-repeat
     center center;
-
-  display: block;
-  width:   300px;
-  height:  107px;
-  margin:  60px 10px;
 }
 
 .navbar {
   @extend .text-uppercase;
+  border-bottom: 0;
+  box-shadow:    0 1px 2px rgba(0,0,0,.5);
+
+  .navbar-nav > li > a {
+    @include transition(opacity .25s ease);
+    font-size: 15px;
+    opacity:   .7;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+
+  .fa {
+    font-size: 18px;
+  }
+
+  .text-warning {
+    color: #f58634;
+  }
+}
+
+.navbar-right > li > a {
+  padding-left:  10px;
+  padding-right: 10px;
 }
 
 .navbar-brand {
+  width:  130px;
+  height: $navbar-height;
+
   background: transparent
     url(/assets/images/logo/logo-orange-sm.png)
     no-repeat
     center center;
-
-  width:   154px;
-  height:  $navbar-height;
-  padding: 15px 25px;
 }
 
 
@@ -73,4 +109,12 @@ header {
   @media (min-width: $screen-lg-min) {
     width: $container-md;
   }
+}
+
+.content {
+  background-color: #373435;
+  box-shadow:       0 2px 2px rgba(0,0,0,.5);
+  min-height:       500px;
+  position:         relative;
+  z-index:          1;
 }
