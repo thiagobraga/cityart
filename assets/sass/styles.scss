@@ -4,8 +4,8 @@ $fa-font-path:   "../../../bower_components/font-awesome/fonts" !default;
 @import '../../bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap';
 @import '../../bower_components/font-awesome/scss/font-awesome';
 
-@import 'variables';
-@import 'mixins';
-@import 'type';
-@import 'helpers';
-@import 'layout';
+@import '_variables';
+@import '_mixins';
+@import '_type';
+@import '_helpers';
+@import '_layout';

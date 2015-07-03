@@ -50,7 +50,10 @@ gulp.task('browser-sync', function () {
 gulp.task('styles', function () {
     return gulp.src(sass_files.main)
         .pipe(plumber())
-        .pipe(sass({ style: 'compressed' }))
+        .pipe(sass({
+            style: 'compressed',
+            includePaths: ['assets/sass']
+        }))
         .on('error', function (err) {
             console.log('\nError: ' + err.message);
             console.log('File: ' + err.fileName);
