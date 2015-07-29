@@ -134,20 +134,20 @@ class CityArt extends CI_Controller
         $count             = count($css);
         $main_path         = '/assets/';
 
-        for ($i = 0; $i < $count; $i++) {
+        // for ($i = 0; $i < $count; $i++) {
 
-            // The application may reference JavaScript or CSS files
-            // from respective src folder, then the application should
-            // not concatenate timestamp nor concat the min to the path
-            // of this file.
-            if (!strpos($css[$i], '/src/')) {
+        //     // The application may reference JavaScript or CSS files
+        //     // from respective src folder, then the application should
+        //     // not concatenate timestamp nor concat the min to the path
+        //     // of this file.
+        //     if (!strpos($css[$i], '/src/')) {
 
-                // Use minified files only in production and testing.
-                if (ENVIRONMENT !== 'development') {
-                    $css[$i] .= '.min';
-                }
-            }
-        }
+        //         // Use minified files only in production and testing.
+        //         if (ENVIRONMENT !== 'development') {
+        //             $css[$i] .= '.min';
+        //         }
+        //     }
+        // }
 
         $og_css = $this->load->get_var('css');
 
@@ -174,19 +174,19 @@ class CityArt extends CI_Controller
         $main_path         = '/assets/';
 
         // Adding version for each js file
-        for ($i = 0; $i < $count; $i++) {
+        // for ($i = 0; $i < $count; $i++) {
 
-            // The application may reference JavaScript or CSS files
-            // from respective src folder. Then the application should
-            // not concatenate timestamp nor min to the path of this file.
-            if (!strpos($js[$i], '/src/')) {
+        //     // The application may reference JavaScript or CSS files
+        //     // from respective src folder. Then the application should
+        //     // not concatenate timestamp nor min to the path of this file.
+        //     if (!strpos($js[$i], '/src/')) {
 
-                // Use minified files only in production and testing.
-                if (ENVIRONMENT !== 'development') {
-                    $js[$i] .= '.min';
-                }
-            }
-        }
+        //         // Use minified files only in production and testing.
+        //         if (ENVIRONMENT !== 'development') {
+        //             $js[$i] .= '.min';
+        //         }
+        //     }
+        // }
 
         $og_js = $this->load->get_var('js');
 
