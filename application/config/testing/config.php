@@ -16,7 +16,7 @@ defined('BASEPATH') || exit('No direct script access allowed');
  *  path to your installation.
  *
  */
-$config['base_url'] = 'http://testing.cityart.com.br';
+$config['base_url'] = 'http://cityart.thiagobraga.org';
 
 /*
 |--------------------------------------------------------------------------
