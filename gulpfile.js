@@ -80,3 +80,8 @@ gulp.task('default', ['styles', 'scripts', 'browser-sync'], function () {
     gulp.watch(sass_files.files, ['styles']);
     gulp.watch(js_files, ['scripts']);
 });
+
+// Production
+gulp.task('production', function () {
+    gulp.start('styles', 'scripts');
+});
