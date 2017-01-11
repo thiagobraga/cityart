@@ -1,4 +1,6 @@
-BPT Advogados
-=============
+CityArt
+=======
 
-Site da BPT Advogados.
+Repositório do site da CityArt.
+
+## Instalação

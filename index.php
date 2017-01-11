@@ -28,7 +28,7 @@ error_reporting(E_ALL ^E_NOTICE);
  *
  */
 switch ($_SERVER['SERVER_NAME']) {
-    case 'bptadvogados.com.br':
+    case 'cityart.com.br':
         define('ENVIRONMENT', 'production');
         break;
     default:
