@@ -1,4 +1,4 @@
-<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+<nav class="navbar navbar-fixed-top" role="navigation">
     <div class="container">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
@@ -17,23 +17,23 @@
         <div class="collapse navbar-collapse navbar-ex1-collapse">
             <ul class="nav navbar-nav">
                 <li><a href="<?php echo base_url('empresa') ?>">A Empresa</a></li>
-                <li><a href="<?php echo base_url('servicos') ?>">Serviços</a></li>
-                <li><a href="<?php echo base_url('portfolio') ?>">Portfolio</a></li>
+                <li><a href="<?php echo base_url('design') ?>">Design</a></li>
+                <li><a href="<?php echo base_url('pre-impressao') ?>">Pré-Impressão</a></li>
                 <li><a href="<?php echo base_url('contato') ?>">Contato</a></li>
             </ul>
 
             <ul class="nav navbar-nav navbar-right">
-                <li><a href="http://facebook.com/cityart">
-                    <span class="fa fa-facebook text-warning"></span>
+                <li><a href="mailto:contato@cityart.com.br" target="_blank">
+                    <i class="fa fa-envelope text-warning"></i>
                 </a></li>
-                <li><a href="http://pinterest.com/cityart">
-                    <span class="fa fa-pinterest-p text-warning"></span>
+                <li><a href="tel:+14997774155" target="_blank">
+                    <i class="ionicons ion-social-whatsapp text-warning"></i>
                 </a></li>
-                <li><a href="http://behance.com/cityart">
-                    <span class="fa fa-behance text-warning"></span>
+                <li><a href="tel:+14997774155" target="_blank">
+                    <i class="fa fa-skype text-warning"></i>
                 </a></li>
-                <li><a href="mailto:contato@cityart.com.br">
-                    <span class="fa fa-envelope-o text-warning"></span>
+                <li><a href="http://facebook.com/cityart.artesgraficas" target="_blank">
+                    <i class="fa fa-facebook-official text-warning"></i>
                 </a></li>
             </ul>
         </div><!-- /.navbar-collapse -->

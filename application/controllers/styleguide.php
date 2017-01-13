@@ -37,7 +37,7 @@ defined('BASEPATH') || exit('No direct script access allowed');
  * @link      http://barpedia.org
  * @access    public
  */
-class Styleguide extends CityArt
+class Styleguide extends MY_Controller
 {
 
     /**
@@ -56,7 +56,7 @@ class Styleguide extends CityArt
             'content' => 'styleguide/styleguide'
         ));
 
-        CityArt::setTitle($this->data['title'] . ' | ' . $this->data['page']);
+        MY_Controller::setTitle($this->data['title'] . ' | ' . $this->data['page']);
         $this->load->view('template', $this->data);
     }
 

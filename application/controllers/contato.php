@@ -37,7 +37,7 @@ defined('BASEPATH') || exit('No direct script access allowed');
  * @link      http://barpedia.org
  * @access    public
  */
-class Contato extends CityArt
+class Contato extends MY_Controller
 {
 
     public function index()
@@ -47,7 +47,7 @@ class Contato extends CityArt
             'content' => 'contato/contato'
         ));
 
-        CityArt::setTitle($this->data['title'] . ' | ' . $this->data['page']);
+        MY_Controller::setTitle($this->data['title'] . ' | ' . $this->data['page']);
         $this->load->view('template', $this->data);
     }
 

@@ -12,7 +12,7 @@ defined('BASEPATH') || exit('No direct script access allowed');
  * @link      http://barpedia.org
  * @access    public
  */
-class Portfolio extends CityArt
+class Pre_Impressao extends MY_Controller
 {
 
     /**
@@ -23,12 +23,12 @@ class Portfolio extends CityArt
     public function index()
     {
         $this->data = array_merge($this->data, array(
-            'page'    => 'Portfolio',
-            'content' => 'portfolio/portfolio'
+            'page'    => 'Pré-Impressao',
+            'content' => 'pre-impressao/pre-impressao'
         ));
 
         $title = $this->data['title'] . ' | ' . $this->data['page'];
-        CityArt::setTitle($title);
+        MY_Controller::setTitle($title);
 
         $this->load->view('template', $this->data);
     }

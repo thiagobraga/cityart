@@ -1,7 +1,7 @@
 <?php
 
 /**
- * CityArt.php
+ * MY_Controller.php
  *
  * PHP version 5
  *
@@ -25,12 +25,12 @@
 defined('BASEPATH') || exit('No direct script access allowed');
 
 /**
- * CityArt
+ * MY_Controller
  * @author Thiago Braga <thiago@institutosoma.org.br>
  * @access public
  * @version 1.0
  */
-class CityArt extends CI_Controller
+class MY_Controller extends CI_Controller
 {
 
     /**
@@ -76,16 +76,16 @@ class CityArt extends CI_Controller
         $this->data     = array(
             'controller' => $this->router->fetch_class(),
             'method'     => $this->router->fetch_method(),
-            'title'      => 'CityArt | Press & Web | Design, desenvolvimento web, consultoria'
+            'title'      => 'CityArt Artes Gráficas | Design & Pré-Impressão'
         );
 
         // Default info
-        CityArt::setDescription('Empresa bauruense no ramo de design e desenvolvimento web com visão de mercado, usabilidade e simplicidade. Também prestamos consultoria e suporte para essas áreas.');
-        CityArt::setKeywords('design, sites, bauru, desenvolvimento web');
+        MY_Controller::setDescription('Empresa bauruense no ramo de design e desenvolvimento web com visão de mercado, usabilidade e simplicidade. Também prestamos consultoria e suporte para essas áreas.');
+        MY_Controller::setKeywords('design, sites, bauru, desenvolvimento web');
 
         // Loading scripts and stylesheet
-        CityArt::loadCss(array('css/dist/styles'));
-        CityArt::loadJs(array('js/dist/scripts'));
+        MY_Controller::loadCss(array('css/dist/styles'));
+        MY_Controller::loadJs(array('js/dist/scripts'));
     }
 
     /**
@@ -134,21 +134,6 @@ class CityArt extends CI_Controller
         $count             = count($css);
         $main_path         = '/assets/';
 
-        // for ($i = 0; $i < $count; $i++) {
-
-        //     // The application may reference JavaScript or CSS files
-        //     // from respective src folder, then the application should
-        //     // not concatenate timestamp nor concat the min to the path
-        //     // of this file.
-        //     if (!strpos($css[$i], '/src/')) {
-
-        //         // Use minified files only in production and testing.
-        //         if (ENVIRONMENT !== 'development') {
-        //             $css[$i] .= '.min';
-        //         }
-        //     }
-        // }
-
         $og_css = $this->load->get_var('css');
 
         if ($og_css && $concat) {
@@ -173,21 +158,6 @@ class CityArt extends CI_Controller
         $count             = count($js);
         $main_path         = '/assets/';
 
-        // Adding version for each js file
-        // for ($i = 0; $i < $count; $i++) {
-
-        //     // The application may reference JavaScript or CSS files
-        //     // from respective src folder. Then the application should
-        //     // not concatenate timestamp nor min to the path of this file.
-        //     if (!strpos($js[$i], '/src/')) {
-
-        //         // Use minified files only in production and testing.
-        //         if (ENVIRONMENT !== 'development') {
-        //             $js[$i] .= '.min';
-        //         }
-        //     }
-        // }
-
         $og_js = $this->load->get_var('js');
 
         if ($og_js && $concat) {
@@ -201,5 +171,5 @@ class CityArt extends CI_Controller
 
 }
 
-/* End of file CityArt.php */
-/* Location: ./application/core/CityArt.php */
+/* End of file MY_Controller.php */
+/* Location: ./application/core/MY_Controller.php */

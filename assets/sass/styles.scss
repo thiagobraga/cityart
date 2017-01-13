@@ -1,8 +1,10 @@
-$icon-font-path: "../../../bower_components/bootstrap-sass-official/assets/fonts/bootstrap/" !default;
-$fa-font-path:   "../../../bower_components/font-awesome/fonts" !default;
+$icon-font-path:     "../../../bower_components/bootstrap-sass-official/assets/fonts/bootstrap/" !default;
+$fa-font-path:       "../../../bower_components/font-awesome/fonts" !default;
+$ionicons-font-path: "../../../bower_components/Ionicons/fonts" !default;
 
 @import '../../bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap';
 @import '../../bower_components/font-awesome/scss/font-awesome';
+@import '../../bower_components/Ionicons/scss/ionicons';
 
 @import '_variables';
 @import '_mixins';

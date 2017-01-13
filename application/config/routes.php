@@ -43,7 +43,7 @@ defined('BASEPATH') || exit('No direct script access allowed');
 
 $route['404_override']       = '';
 $route['default_controller'] = 'home';
-
+$route['pre-impressao']      = 'pre_impressao';
 
 /* End of file routes.php */
 /* Location: ./application/config/routes.php */

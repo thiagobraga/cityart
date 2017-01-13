@@ -37,7 +37,7 @@ defined('BASEPATH') || exit('No direct script access allowed');
  * @link      http://bptadvogados.com.br
  * @access    public
  */
-class Home extends CityArt
+class Home extends MY_Controller
 {
 
     /**
@@ -56,7 +56,7 @@ class Home extends CityArt
             'content' => 'home/home'
         ));
 
-        CityArt::setTitle($this->data['title'] . ' | ' . $this->data['page']);
+        MY_Controller::setTitle($this->data['title'] . ' | ' . $this->data['page']);
         $this->load->view('template', $this->data);
     }
 
