@@ -22,7 +22,8 @@
 
 body {
   color: $gray;
-  font:  400 14px/1.5 'Futura Bk BT', sans-serif;
+  font:  400 16px/1.5 'Futura Bk BT', sans-serif;
+  letter-spacing: -0.1px;
 }
 
 h1 {
@@ -43,4 +44,14 @@ h1 {
 
   &:before { right: 1.5%; }
   &:after  { left:  1.5%; }
+}
+
+h2 {
+  line-height:   0.9;
+  margin-top:    0;
+  margin-bottom: 20px;
+}
+
+p {
+  margin: 0 0 20px;
 }

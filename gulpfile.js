@@ -51,13 +51,13 @@ gulp.task('styles', function () {
     .pipe(sass({
       style: 'compressed',
       includePaths: ['assets/sass']
-      }))
+    }))
     .on('error', function (err) {
       console.log('\nError: ' + err.message);
       console.log('File: ' + err.fileName);
       console.log('Line: ' + err.lineNumber + '\n');
       this.emit('end');
-      })
+    })
     .pipe(autoprefixer('last 2 version', 'safari 5', 'ie 8', 'ie 9', 'opera 12.1', 'ios 6', 'android 4'))
     .pipe(gulp.dest(sass_files.dest))
     .pipe(reload({ stream: true }));
