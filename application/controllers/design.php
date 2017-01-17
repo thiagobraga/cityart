@@ -2,14 +2,14 @@
 
 defined('BASEPATH') || exit('No direct script access allowed');
 
-class Pre_Impressao extends MY_Controller
+class Design extends MY_Controller
 {
 
     public function index()
     {
         $this->data = array_merge($this->data, [
-            'page'    => 'Pré-Impressao',
-            'content' => 'pre-impressao/pre-impressao'
+            'page'    => 'Design',
+            'content' => 'design/design'
         ]);
 
         MY_Controller::setTitle($this->data['title'] . ' | ' . $this->data['page']);
