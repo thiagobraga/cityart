@@ -1,10 +1,13 @@
 <div class="row">
     <div class="col-xs-6 text-justify">
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod est ut ipsa similique accusantium eveniet quibusdam dicta itaque, aspernatur a eligendi, cum ratione nostrum aut? Temporibus quaerat sint, ipsa enim. Eius labore voluptatibus itaque voluptates dicta placeat, temporibus, iste doloremque reiciendis neque facere obcaecati quia provident, eum nobis sapiente ipsa autem voluptate.</p>
-        <p>Sit ea voluptatibus, necessitatibus at ipsam voluptas. Incidunt a, quidem dolor voluptas voluptate, asperiores praesentium dicta, tempora minus labore mollitia quo distinctio. Cupiditate quos at nostrum pariatur, delectus illo, iste cum perferendis fugit doloribus, repellat nulla voluptatem voluptas atque veniam exercitationem debitis id dolorem!</p>
+        <h2>Apresentação</h2>
+        <p>CityArt é formada por uma equipe profissional que tem por objetivo cuidar do projeto visual da sua empresa, garantindo o sucesso e crescimento do seu negócio.</p>
+        <p>Buscamos soluções que possam ir além das expectativas, interpretando a necessidade e a experiência de nossos clientes. <b>O sucesso é a nossa meta!</b></p>
+        <p>Profissionais com mais de quinze anos no mercado gráfico lidam diretamente com a sua marca buscando destaque para sua empresa.</p>
+        <p>A tarefa pressupõe sobretudo, garantir qualidade para o seu projeto e confiança em nosso trabalho, para isso, lançamos mão de todo o conhecimento, responsabilidade e <b>cuidado especial!</b></p>
     </div>
 
     <div class="col-xs-6">
-        <img src="http://placehold.it/440x250/4b4b4d/222222?text=Foto+aqui" />
+        <img src="assets/images/photos/about-photo.jpg" class="img-responsive" />
     </div>
 </div>
