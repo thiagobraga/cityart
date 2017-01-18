@@ -1,13 +1,13 @@
-$icon-font-path:     "../../../bower_components/bootstrap-sass-official/assets/fonts/bootstrap/" !default;
-$fa-font-path:       "../../../bower_components/font-awesome/fonts" !default;
-$ionicons-font-path: "../../../bower_components/Ionicons/fonts" !default;
+$icon-font-path:     "../../../node_modules/bootstrap-sass/assets/fonts/bootstrap/" !default;
+$fa-font-path:       "../../../node_modules/font-awesome/fonts" !default;
+$ionicons-font-path: "../../../node_modules/Ionicons/fonts" !default;
 
-@import '../../bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap';
-@import '../../bower_components/font-awesome/scss/font-awesome';
-@import '../../bower_components/Ionicons/scss/ionicons';
+@import '../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap';
+@import '../../node_modules/font-awesome/scss/font-awesome';
+@import '../../node_modules/Ionicons/scss/ionicons';
 
-@import '_variables';
-@import '_mixins';
-@import '_type';
-@import '_helpers';
-@import '_layout';
+@import 'variables';
+@import 'mixins';
+@import 'type';
+@import 'helpers';
+@import 'layout';

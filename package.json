@@ -11,6 +11,11 @@
     "node": "0.8.x",
     "npm": "1.1.x"
   },
+  "dependencies": {
+    "font-awesome": "4.7.0",
+    "bootstrap-sass": "3.3.7",
+    "ionicons": "2.0.1"
+  },
   "devDependencies": {
     "browser-sync": "2.18.6",
     "gulp": "3.9.1",
