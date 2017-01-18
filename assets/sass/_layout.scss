@@ -1,9 +1,10 @@
 // Variables
 // =======================================
-$gradient-start:  #fff;
-$gradient-finish: #aa4c3b;
-$footer-height:   100px;
-
+$gradient-start:    #fff;
+$gradient-finish:   #aa4c3b;
+$header-height:     194px;
+$footer-height:     100px;
+$box-shadow-height: 18px;
 
 // Body styles
 // =======================================
@@ -34,8 +35,8 @@ header {
 
     background-size: cover;
     box-shadow:      0 15px 0 $brand-warning, 0 18px 0 #fff;
-    height:          194px;
-    margin-bottom:   18px;
+    height:          $header-height;
+    margin-bottom:   $box-shadow-height;
   }
 
   .services {
@@ -172,12 +173,10 @@ header {
 
 .content {
   @include radial-gradient(#000, #222, 200px, 100px);
-  box-shadow:  0 2px 2px rgba(0,0,0,.5);
-  min-height:  500px;
+  box-shadow:  0 2px 4px rgba(0,0,0,.5);
+  min-height:  calc(100vh - #{$footer-height} - #{$navbar-height} - #{$header-height} - #{$box-shadow-height});
   padding:     30px;
   padding-top: 65px;
-  position:    relative;
-  z-index:     1;
 }
 
 .panel-image {
