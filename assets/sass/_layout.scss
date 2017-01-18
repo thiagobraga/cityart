@@ -2,17 +2,23 @@
 // =======================================
 $gradient-start:  #fff;
 $gradient-finish: #aa4c3b;
+$footer-height:   100px;
 
 
 // Body styles
 // =======================================
+html {
+  position:   relative;
+  min-height: 100%;
+}
+
 body {
   background:                 #111;
   padding-top:                $navbar-height;
+  margin-bottom:              $footer-height;
   -webkit-font-smoothing:     antialiased;
   -webkit-overflow-scrolling: touch;
 }
-
 
 // Header definitions
 // =======================================
@@ -53,6 +59,31 @@ header {
   }
 }
 
+// Footer
+// =======================================
+.footer {
+  background-color: #111;
+  font-size:        14px;
+  line-height:      1.4;
+  text-align:       center;
+  width:            100%;
+  height:           $footer-height;
+  position:         absolute;
+  bottom:           0;
+
+  .first-line {
+    font-size:      15px;
+    letter-spacing: 1px;
+  }
+
+  &, a {
+    color: #fff;
+  }
+
+  .container {
+    padding: 20px;
+  }
+}
 
 // Logo
 // =======================================
