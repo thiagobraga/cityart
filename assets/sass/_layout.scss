@@ -164,7 +164,7 @@ header {
 }
 
 .content {
-  @include radial-gradient(#000, #222, 200px, 100px);
+  @include radial-gradient(#222, #000, center, center);
   box-shadow:  0 2px 4px rgba(0,0,0,.5);
   min-height:  calc(100vh - #{$footer-height} - #{$navbar-height} - #{$header-height} - #{$box-shadow-height});
   padding:     30px;
