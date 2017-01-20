@@ -69,13 +69,24 @@ header {
     letter-spacing: 1px;
   }
 
-  &, a {
-    color: #fff;
+  a {
+    color: #bdbdbd;
   }
 
   .container {
-    padding: 20px;
+    background-color: #161616;
+    box-shadow:       0 2px 3px rgba(0,0,0,.5);
+    padding:          0 30px;
   }
+
+  .footer-content {
+    border-top: 3px solid #221f1f;
+    padding:    20px;
+  }
+}
+
+.processos img {
+  margin-bottom: 60px;
 }
 
 // Logo
@@ -146,6 +157,13 @@ header {
     center center;
 }
 
+hr {
+  margin-top:    20px;
+  margin-bottom: 30px;
+  border:        0;
+  border-top:    3px solid #221f1f;
+}
+
 
 // Bootstrap grid override
 // =======================================
@@ -164,8 +182,8 @@ header {
 }
 
 .content {
-  @include radial-gradient(#222, #000, center, center);
-  box-shadow:  0 2px 4px rgba(0,0,0,.5);
+  @include gradient-vertical-three-colors(#090909, #161616, 50%, #161616);
+  box-shadow:  0 2px 3px rgba(0,0,0,.5);
   min-height:  calc(100vh - #{$footer-height} - #{$navbar-height} - #{$header-height} - #{$box-shadow-height});
   padding:     30px;
   padding-top: 65px;

@@ -12,7 +12,9 @@
         <?php $this->load->view('_template/header') ?>
 
         <!-- CONTENT -->
-        <?php $this->load->view($content) ?>
+        <div class="content container">
+            <?php $this->load->view($content) ?>
+        </div>
 
         <!-- FOOTER -->
         <?php $this->load->view('_template/footer') ?>
