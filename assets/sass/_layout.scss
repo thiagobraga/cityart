@@ -89,6 +89,33 @@ header {
   margin-bottom: 60px;
 }
 
+.flex {
+  display: flex;
+  justify-content: space-around;
+
+  div {
+    margin: 15px;
+  }
+
+  .grid-image {
+    @media (min-width: 992px) {
+      height: 360px;
+    }
+
+    @media (min-width: 768px) and (max-width: 991px) {
+
+    }
+
+    @media (min-width: 480px) and (max-width: 767px) {
+
+    }
+
+    @media (max-width: 479px) {
+
+    }
+  }
+}
+
 // Logo
 // =======================================
 .logo {
@@ -164,29 +191,13 @@ hr {
   border-top:    3px solid #221f1f;
 }
 
-
-// Bootstrap grid override
-// =======================================
-.container {
-  @include container-fixed;
-
-  @media (min-width: $screen-sm-min) {
-    width: $container-sm;
-  }
-  @media (min-width: $screen-md-min) {
-    width: $container-md;
-  }
-  @media (min-width: $screen-lg-min) {
-    width: $container-md;
-  }
-}
-
 .content {
   @include gradient-vertical-three-colors(#090909, #161616, 50%, #161616);
-  box-shadow:  0 2px 3px rgba(0,0,0,.5);
-  min-height:  calc(100vh - #{$footer-height} - #{$navbar-height} - #{$header-height} - #{$box-shadow-height});
-  padding:     30px;
-  padding-top: 65px;
+  box-shadow:     0 2px 3px rgba(0,0,0,.5);
+  min-height:     calc(100vh - #{$footer-height} - #{$navbar-height} - #{$header-height} - #{$box-shadow-height});
+  padding:        15px;
+  padding-top:    65px;
+  padding-bottom: 30px;
 }
 
 .panel-image {

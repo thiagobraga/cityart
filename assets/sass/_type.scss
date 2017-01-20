@@ -30,29 +30,9 @@ h1, h2, h3, h4, h5, h6 {
   color: #fff;
 }
 
-h1 {
-  margin:      60px 0;
-  text-align:  center;
-  display:     table;
-  white-space: nowrap;
-
-  &:before,
-  &:after {
-    border-top: 1px solid darken($gray, 25%);
-    content:    '';
-    display:    table-cell;
-    position:   relative;
-    top:        .5em;
-    width:      40%;
-  }
-
-  &:before { right: 1.5%; }
-  &:after  { left:  1.5%; }
-}
-
 h2 {
   font-size:     26px;
-  line-height:   0.9;
+  line-height:   0.8;
   margin-top:    0;
   margin-bottom: 20px;
 }

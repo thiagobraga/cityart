@@ -1,5 +1,5 @@
-<div class="row">
-    <div class="col-xs-6 text-justify">
+<div class="flex">
+    <div class="text-justify">
         <h2>Assessoria</h2>
         <p>
             Oferecemos assessoria técnica e serviços de pré-impressão para gráficas e empresas similares, lidando com trabalhos de arte final, envio e controle de provas, fechamento de arquivo, solicitação de matrizes de impressão em contato direto com os fornecedores.<br/>
@@ -9,19 +9,19 @@
         <p>Nosso trabalho visa o planejamento e adaptação do fluxo de trabalho, implantando melhorias visando a qualidade e  produtividade, eliminando erros e evitando desperdícios além de otimizar o tempo e agilizar o proceso.</p>
     </div>
 
-    <div class="col-xs-6">
-        <img src="assets/images/photos/assessoria.jpg" class="img-responsive" />
+    <div>
+        <img src="assets/images/photos/assessoria.jpg" class="grid-image" />
     </div>
 </div>
 
 <hr/>
 
-<div class="row">
-    <div class="col-xs-6">
-        <img src="assets/images/photos/fluxo.png" class="img-responsive" />
+<div class="flex">
+    <div>
+        <img src="assets/images/photos/fluxo.png" class="grid-image" />
     </div>
 
-    <div class="col-xs-6 text-justify">
+    <div class="text-justify">
         <h2>Fluxo de Trabalho</h2>
         <p>Com conhecimento técnico em processos gráficos, estamos preparados para atender a sua demanda de serviços, lidando diretamente com vendedores, representantes e clientes, controlando o fluxo de solicitações e envio de provas bem como conferência e fechamento de arquivo, trabalhando em contato com clicherias e bureaus de serviços, solicitando clichês, fotolitos, chapas, facas, hot-stamp e outros.</p>
         <ul>
@@ -38,8 +38,8 @@
 
 <hr/>
 
-<div class="row processos">
-    <div class="col-xs-6 text-justify">
+<div class="flex processos">
+    <div class="text-justify">
         <h2>Diferentes Processos</h2>
         <p>Seja em offset, como folhetos, cartões, catálogos, cartazes, folders, pastas, embalagens; em flexografia, com rótulos, etiquetas, adesivos e embalagens flexíveis, ou até mesmo serigrafia e contéudo digital, nós estamos prontos para desenvolver o seu produto, com foco na produção gráfica, planejando e direcionando corretamente o projeto.</p>
         <p>Todos os cuidados são necessários para garantir o sucesso do projeto. Em <b>OFFSET</b>, os cuidados no planejamento e fechamento, como a correta montagem e imposição, aproveitando matrizes de impressão, áreas de entintagem, cortes, dobras e afins, são alguns dos itens de verificação que exigem conhecimento.</p>
@@ -52,8 +52,8 @@
         </p>
     </div>
 
-    <div class="col-xs-6">
-        <img src="assets/images/photos/processos.png" class="img-responsive" />
+    <div>
+        <img src="assets/images/photos/processos.png" class="grid-image" />
 
         <p class="text-center">
             <b>TUDO QUE VOCÊ PRECISA É DE UM PRIMEIRO PASSO!</b><br/>
