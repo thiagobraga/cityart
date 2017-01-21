@@ -12,7 +12,7 @@ class Pre_Impressao extends MY_Controller
             'content' => 'pre-impressao/pre-impressao'
         ]);
 
-        MY_Controller::setTitle($this->data['title'] . ' | ' . $this->data['page']);
+        $this->data['title'] = $this->data['title'] . ' | ' . $this->data['page'];
 
         $this->load->view('template', $this->data);
     }

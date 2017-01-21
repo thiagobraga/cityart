@@ -12,7 +12,7 @@ class Home extends MY_Controller
             'content' => 'home/home'
         ]);
 
-        MY_Controller::setTitle($this->data['title'] . ' | ' . $this->data['page']);
+        $this->data['title'] = $this->data['title'] . ' | ' . $this->data['page'];
 
         $this->load->view('template', $this->data);
     }
