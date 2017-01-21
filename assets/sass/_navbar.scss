@@ -1,0 +1,55 @@
+// Navbar
+// =======================================
+.navbar {
+  @extend .text-uppercase;
+  background-color: #161616;
+  border-bottom:    0;
+  box-shadow:       0 1px 2px rgba(0,0,0,.5);
+
+  .nav > li > a:hover,
+  .nav > li > a:focus {
+    background-color: darken(#161616, 2%);
+  }
+
+  .nav > li.active > a {
+    background-color: darken(#161616, 6%);
+    color:            #fff;
+    opacity:          1;
+  }
+
+  .navbar-nav > li > a {
+    @include transition(all .25s ease);
+    color:       $gray;
+    font-size:   15px;
+    opacity:     .7;
+    text-shadow: 0 1px 1px rgba(0,0,0,.5);
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+
+  .fa,
+  .ionicons {
+    font-size: 18px;
+  }
+}
+
+.navbar-right {
+  padding-right: 30px;
+
+  > li > a {
+    padding-left:  20px;
+    padding-right: 0;
+  }
+}
+
+.navbar-brand {
+  width:  162px;
+  height: $navbar-height;
+
+  background: transparent
+    url(/assets/images/logo/logo-sm.png)
+    no-repeat
+    center center;
+}

@@ -1,15 +1,11 @@
-$icon-font-path:     "../../../node_modules/bootstrap-sass/assets/fonts/bootstrap/" !default;
-$fa-font-path:       "../../../node_modules/font-awesome/fonts" !default;
-$ionicons-font-path: "../../../node_modules/Ionicons/fonts" !default;
+@import 'variables';
 
 @import '../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap';
 @import '../../node_modules/font-awesome/scss/font-awesome';
 @import '../../node_modules/Ionicons/scss/ionicons';
 
-@import 'variables';
-@import '../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/grid';
-
 @import 'mixins';
 @import 'type';
 @import 'helpers';
+@import 'navbar';
 @import 'layout';
