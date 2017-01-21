@@ -1,27 +1,5 @@
 <?php
 
-/**
- * MY_Controller.php
- *
- * PHP version 5
- *
- * LICENSE: This source file is subject to version 3.01 of the PHP license
- * that is available through the world-wide-web at the following URI:
- * http://www.php.net/license/3_01.txt.  If you did not receive a copy of
- * the PHP License and are unable to obtain it through the web, please
- * send a note to license@php.net so we can mail you a copy immediately.
- *
- * @category  Geoprocessamento de dados
- * @package   Barpedia
- * @author    Thiago Braga <thiago@institutosoma.org.br>
- * @author    Matheus Cesario <matheus@institutosoma.org.br>
- * @copyright 1997-2005 The PHP Group
- * @license   http://www.php.net/license/3_01.txt  PHP License 3.01
- * @version   GIT:
- * @link      http://barpedia.org
- * @since     File available since Release 0.0.0
- */
-
 defined('BASEPATH') || exit('No direct script access allowed');
 
 /**
@@ -40,13 +18,6 @@ class MY_Controller extends CI_Controller
      * @var {stdClass}
      */
     public $data;
-
-    /**
-     * Variável response utilizada nas requisições ajax.
-     *
-     * @var {stdClass}
-     */
-    public $response;
 
     /**
      * Armazena o nome do controller
@@ -72,101 +43,80 @@ class MY_Controller extends CI_Controller
     {
         parent::__construct();
 
-        $this->response = array();
-        $this->data     = array(
-            'controller' => $this->router->fetch_class(),
-            'method'     => $this->router->fetch_method(),
-            'title'      => 'CityArt Artes Gráficas | Design & Pré-Impressão'
-        );
+        $this->data     = [
+            'controller'  => $this->router->fetch_class(),
+            'method'      => $this->router->fetch_method(),
+            'title'       => 'CityArt Artes Gráficas | Design & Pré-Impressão',
+            'description' => 'Empresa bauruense no ramo de design e desenvolvimento web com visão de mercado, usabilidade e simplicidade. Também prestamos consultoria e suporte para essas áreas.',
+            'keywords'    => 'design, sites, bauru, desenvolvimento web'
+        ];
 
-        // Default info
-        MY_Controller::setDescription('Empresa bauruense no ramo de design e desenvolvimento web com visão de mercado, usabilidade e simplicidade. Também prestamos consultoria e suporte para essas áreas.');
-        MY_Controller::setKeywords('design, sites, bauru, desenvolvimento web');
+        // Defining controllers and navbar itens.
+        // The fields are URL, class name and display name.
+        $this->data['modules'] = [
+            ['design', 'design', 'Design'],
+            ['pre-impressao', 'pre-impressao', 'Pré-Impressão'],
+            ['contato', 'contato', 'Contato']
+        ];
 
-        // Loading scripts and stylesheet
-        MY_Controller::loadCss(array('css/dist/styles'));
-        MY_Controller::loadJs(array('js/dist/scripts'));
+        // Define active item on navbar based on current controller.
+        foreach ($this->data['modules'] as $key => $module) {
+            if ($module[0] === $this->router->uri->uri_string) {
+                $this->data['modules'][$key][] = true;
+            }
+        }
+
+        // Load assets
+        // ==========================================
+        self::loadAssets([
+            'assets/css/dist/styles.css',
+            'assets/js/dist/scripts.js'
+        ]);
     }
 
     /**
-     * Set page title.
-     *
-     * @access protected
-     * @param  string $title
-     */
-    protected function setTitle($title)
-    {
-        $this->load->vars(array('title' => $title));
-    }
-
-    /**
-     * Set meta description.
-     *
-     * @access protected
-     * @param  string $description
-     */
-    protected function setDescription($description)
-    {
-        $this->load->vars(array('description' => $description));
-    }
-
-    /**
-     * Set meta keywords.
-     *
-     * @access protected
-     * @param  string $keywords
-     */
-    protected function setKeywords($keywords)
-    {
-        $this->load->vars(array('keywords' => $keywords));
-    }
-
-    /**
-     * Load CSS styles.
+     * Load assets files.
      *
      * @access  protected
-     * @param   {Array}    $css     Array of paths to CSS files.
+     * @param   {Array}    $files   Array of paths to assets files.
      * @param   {Boolean}  $concat  Concatenate new files to existent array or not.
      * @return  {String}
      */
-    protected function loadCss(array $css, $concat = true)
+    protected function loadAssets(array $files, $concat = true)
     {
-        $count             = count($css);
-        $main_path         = '/assets/';
+        $countFiles = count($files);
 
-        $og_css = $this->load->get_var('css');
-
-        if ($og_css && $concat) {
-            $css = array_merge($og_css, $css);
-            $css = array_unique($css);
+        if ($concat === true) {
+            $css = $this->load->get_var('css');
+            $js  = $this->load->get_var('js');
         }
 
-        $this->load->vars('css', $css);
-        return $css;
-    }
+        for ($i = 0; $i < $countFiles; $i++) {
+            // The absolute path of the file.
+            $path = $_SERVER['DOCUMENT_ROOT'] . '/' . $files[$i];
 
-    /**
-     * Load JavaScript files.
-     *
-     * @access  protected
-     * @param   {Array}    $js      Array of paths to JS files.
-     * @param   {Boolean}  $concat  Concatenate new files to existent array or not.
-     * @return  {String}
-     */
-    protected function loadJs(array $js, $concat = true)
-    {
-        $count             = count($js);
-        $main_path         = '/assets/';
+            // Get the path info of the file and extract variables.
+            extract(pathinfo($files[$i]));
 
-        $og_js = $this->load->get_var('js');
+            // In production environments, the minified version of the
+            // file will be called and the make time of file will be
+            // concatenated in the path to avoid caching problems.
+            if (ENVIRONMENT === 'production') {
+                $files[$i]  = $dirname . '/' . $filename . '.min.' . $extension;
+                $mktime     = filemtime($path);
+                $files[$i] .= '?v=' . $mktime;
+            }
 
-        if ($og_js && $concat) {
-            $js = array_merge($og_js, $js);
-            $js = array_unique($js);
+            // Node modules alias.
+            if (strpos($files[$i], 'assets') !== 0) {
+                $files[$i] = 'node_modules/' . $files[$i];
+            }
+
+            ${$extension}[] = $files[$i];
         }
 
-        $this->load->vars('js', $js);
-        return $js;
+        $this->load->vars('css', array_unique($css));
+        $this->load->vars('js', array_unique($js));
     }
 
 }
