@@ -31,7 +31,7 @@
     <!-- CSS -->
     <?php if (isset($css)) {
         foreach ($css as $file) { ?>
-            <link href="/assets/<?php echo $file ?>.css" rel="stylesheet" />
+            <link href="<?php echo $file ?>" rel="stylesheet" />
         <?php }
     } ?>
 </head>
