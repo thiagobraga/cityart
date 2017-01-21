@@ -16,8 +16,8 @@ var gulp       = require('gulp'),
   },
 
   js_files = [
-    'bower_components/jquery/dist/jquery.js',
-    'bower_components/bootstrap-sass-official/assets/javascripts/bootstrap.js',
+    'node_modules/jquery/dist/jquery.min.js',
+    'node_modules/bootstrap-sass/assets/javascripts/bootstrap.min.js',
     'assets/js/src/**/*.js'
   ],
 

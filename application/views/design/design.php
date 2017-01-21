@@ -11,3 +11,9 @@
         <img src="assets/images/photos/processo-criativo.jpg" class="grid-image" />
     </div>
 </div>
+
+<div class="owl-carousel">
+    <?php foreach ($carousel as $key => $item) { ?>
+        <img src="assets/images/carousel/portfolio-<?php echo $item[0] ?>.png" alt="<?php echo $item[1] ?>" />
+    <?php } ?>
+</div>

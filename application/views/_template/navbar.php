@@ -16,9 +16,13 @@
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse navbar-ex1-collapse">
             <ul class="nav navbar-nav">
-                <li><a href="<?php echo base_url('design') ?>">Design</a></li>
-                <li><a href="<?php echo base_url('pre-impressao') ?>">Pré-Impressão</a></li>
-                <li><a href="<?php echo base_url('contato') ?>">Contato</a></li>
+                <?php foreach ($modules as $module) { ?>
+                    <li class="navbar-<?php echo $module[1]; if (isset($module[3])) echo ' active' ?>">
+                        <a href="<?php echo base_url($module[0]) ?>">
+                            <?php echo $module[2] ?>
+                        </a>
+                    </li>
+                <?php } ?>
             </ul>
 
             <ul class="nav navbar-nav navbar-right">
