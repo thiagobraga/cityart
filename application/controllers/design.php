@@ -25,6 +25,7 @@ class Design extends MY_Controller
             'owl.carousel/dist/assets/owl.carousel.min.css',
             'owl.carousel/dist/assets/owl.theme.default.min.css',
             'owl.carousel/dist/owl.carousel.min.js',
+            'owl.carousel2.thumbs/dist/owl.carousel2.thumbs.min.js',
             'assets/js/src/modules/design.js'
         ]);
 

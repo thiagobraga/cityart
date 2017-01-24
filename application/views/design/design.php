@@ -12,8 +12,18 @@
     </div>
 </div>
 
-<div class="owl-carousel owl-theme">
+<!-- Carousel -->
+<div class="owl-thumbs" data-slider-id="1">
     <?php foreach ($carousel as $key => $item) { ?>
-        <img src="assets/images/carousel/portfolio-<?php echo $item[0] ?>.png" alt="<?php echo $item[1] ?>" />
+        <button class="owl-thumb-item">
+            <img src="/assets/images/carousel/icon-portfolio-<?php echo $item[0] ?>.png" alt="<?php echo $item[1] ?>" />
+        </button>
     <?php } ?>
 </div>
+
+<div class="owl-carousel owl-theme" data-slider-id="1">
+    <?php foreach ($carousel as $key => $item) { ?>
+        <img src="/assets/images/carousel/portfolio-<?php echo $item[0] ?>.png" alt="<?php echo $item[1] ?>" />
+    <?php } ?>
+</div>
+
