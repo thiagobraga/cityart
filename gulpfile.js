@@ -40,6 +40,7 @@ gulp.task('browser-sync', function () {
     port:       4040,
     open:       false,
     notify:     false,
+    ui:         false,
     logSnippet: false
   });
 });
