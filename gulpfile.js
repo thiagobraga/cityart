@@ -1,11 +1,13 @@
 var gulp       = require('gulp'),
   sass         = require('gulp-sass'),
   autoprefixer = require('gulp-autoprefixer'),
-  browserSync  = require('browser-sync'),
   plumber      = require('gulp-plumber'),
   uglify       = require('gulp-uglify'),
   concat       = require('gulp-concat'),
   rename       = require('gulp-rename'),
+  imagemin     = require('gulp-imagemin'),
+  pngquant     = require('imagemin-pngquant'),
+  browserSync  = require('browser-sync'),
   reload       = browserSync.reload,
 
   sass_files = {
@@ -74,13 +76,24 @@ gulp.task('scripts', function () {
     .pipe(gulp.dest('assets/js/dist'));
 });
 
+// Images
+gulp.task('images', function () {
+  return gulp.src('assets/images/src/**/*')
+    .pipe(imagemin({
+      progressive: true,
+      svgoPlugins: [{ removeViewBox: false }],
+      use: [pngquant({ quality: 80 })]
+    }))
+    .pipe(gulp.dest('assets/images/dist'));
+});
+
 // Default
-gulp.task('default', ['styles', 'scripts', 'browser-sync'], function () {
+gulp.task('default', ['styles', 'scripts', 'images', 'browser-sync'], function () {
   gulp.watch(sass_files.files, ['styles']);
   gulp.watch(js_files, ['scripts']);
 });
 
 // Production
 gulp.task('production', function () {
-  gulp.start('styles', 'scripts');
+  gulp.start('styles', 'scripts', 'images');
 });

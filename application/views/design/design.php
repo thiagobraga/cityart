@@ -8,22 +8,20 @@
     </div>
 
     <div>
-        <img src="assets/images/photos/processo-criativo.jpg" class="grid-image" />
+        <img src="assets/images/dist/photos/processo-criativo.jpg" class="grid-image" />
     </div>
 </div>
 
 <!-- Carousel -->
 <div class="owl-thumbs" data-slider-id="1">
     <?php foreach ($carousel as $key => $item) { ?>
-        <button class="owl-thumb-item">
-            <img src="/assets/images/carousel/icon-portfolio-<?php echo $item[0] ?>.png" alt="<?php echo $item[1] ?>" />
-        </button>
+        <button class="owl-thumb-item owl-thumb-<?php echo $item[0] ?>"></button>
     <?php } ?>
 </div>
 
 <div class="owl-carousel owl-theme" data-slider-id="1">
     <?php foreach ($carousel as $key => $item) { ?>
-        <img src="/assets/images/carousel/portfolio-<?php echo $item[0] ?>.png" alt="<?php echo $item[1] ?>" />
+        <img src="assets/images/dist/carousel/portfolio-<?php echo $item[0] ?>.png" alt="<?php echo $item[1] ?>" />
     <?php } ?>
 </div>
 
