@@ -5,11 +5,11 @@
     </head>
     <body>
         <p>
-            Olá, <?php echo $name ?>. Agradecemos sua mensagem.<br/>
+            Olá, <b><?php echo $name ?></b>. Agradecemos sua mensagem.<br/>
             Em breve entraremos em contato.<br/>
             <br/>
-            <blockquote>
-                <?php echo $message ?>
+            <blockquote style="border-left: 3px solid #999; margin-left: 0; padding-left: 10px;">
+                <?php echo nl2br($message) ?>
             </blockquote>
         </p>
     </body>
