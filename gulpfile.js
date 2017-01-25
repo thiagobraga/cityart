@@ -23,8 +23,11 @@ const gulp     = require('gulp'),
 
   scripts = {
     src: [
+      './node_modules/angular/angular.min.js',
+      './node_modules/ngmap/build/scripts/ng-map.min.js',
       './node_modules/jquery/dist/jquery.min.js',
       './node_modules/bootstrap-sass/assets/javascripts/bootstrap.min.js',
+      './node_modules/noty/js/noty/packaged/jquery.noty.packaged.min.js',
       './assets/js/src/**/*.js'
     ],
     base: './assets/js/src',

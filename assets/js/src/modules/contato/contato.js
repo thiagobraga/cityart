@@ -1,6 +1,14 @@
+// JSHint
+/* global noty */
+
 $(function () {
   'use strict';
-  
+
+  // Noty Defaults
+  $.noty.defaults.layout  = 'topRight';
+  $.noty.defaults.theme   = 'bootstrapTheme';
+  $.noty.defaults.timeout = 7000;
+
   /**
    * Send an e-mail with the data from contact form
    * in landing page.
@@ -19,8 +27,8 @@ $(function () {
     }
 
     btn.addClass('disabled');
-    btn.find('.ion-ios-email-outline').addClass('hidden');
-    btn.find('.ion-load-c').removeClass('hidden');
+    btn.find('.email-icon').addClass('hidden');
+    btn.find('.loading-icon').removeClass('hidden');
 
     $.ajax({
       url: '/contato/send',
@@ -33,26 +41,26 @@ $(function () {
       }
     }).done(function (response) {
       if (response) {
-        window.noty({
+        noty({
           text: 'Seu e-mail foi enviado com sucesso.',
           type: 'success'
         });
         form[0].reset();
       } else {
-        window.noty({
+        noty({
           text: 'Ocorreu um erro no envio do seu e-mail. Tente novamente mais tarde.',
           type: 'error'
         });
       }
     }).fail(function () {
-      window.noty({
+      noty({
         text: 'Ocorreu um erro no envio do seu e-mail. Tente novamente mais tarde.',
         type: 'error'
       });
     }).always(function () {
       btn.removeClass('disabled');
-      btn.find('.ion-ios-email-outline').removeClass('hidden');
-      btn.find('.ion-load-c').addClass('hidden');
+      btn.find('.email-icon').removeClass('hidden');
+      btn.find('.loading-icon').addClass('hidden');
     });
   }
 

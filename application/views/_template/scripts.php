@@ -1,3 +1,5 @@
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDJNF02_xLETL0_H9t5W1jYSYLxhSp6OHs"></script>
+
 <?php if (isset($js)) {
     foreach ($js as $file) { ?>
         <script src="<?php echo $file ?>"></script>

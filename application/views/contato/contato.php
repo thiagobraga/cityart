@@ -2,7 +2,7 @@
     <div class="col-xs-12 col-md-6">
         <h2>Contato</h2>
 
-        <form class="form-horizontal" role="form">
+        <form id="contact-form" class="form-horizontal" role="form">
             <!-- Nome -->
             <input id="name"
                 type="text"
@@ -25,19 +25,47 @@
                 required></textarea>
 
             <!-- Actions -->
-            <div class="col-xs-12 text-center">
-                <button id="send"
-                    class="btn btn-success btn-lg">
-                    Enviar
+            <div class="col-xs-12 text-right">
+                <button id="send" class="btn btn-warning btn-lg">
+                    <i class="fa fa-envelope-o email-icon"></i>
+                    <i class="fa fa-spin fa-spinner loading-icon hidden"></i>
 
-                    <span class="ionicons ion-ios-email-outline"></span>
-                    <span class="ionicons ion-load-c fa-spin hidden"></span>
+                    Enviar
                 </button>
             </div>
         </form>
     </div>
 
     <div class="col-xs-12 col-md-6">
+        <map zoom="16"
+            class="map-md"
+            center="-22.3270663, -49.0765993"
+            disable-double-click-zoom="true"
+            disable-default-u-i="true"
+            draggable="false"
+            scrollwheel="false"
+            keyboard-shortcuts="false"
+            styles="[{featureType:'landscape',elementType:'labels',stylers:[{visibility:'off'}]},{featureType:'transit',elementType:'labels',stylers:[{visibility:'off'}]},{featureType:'poi',elementType:'labels',stylers:[{visibility:'off'}]},{featureType:'water',elementType:'labels',stylers:[{visibility:'off'}]},{featureType:'road',elementType:'labels.icon',stylers:[{visibility:'off'}]},{stylers:[{hue:'#00aaff'},{saturation:-100},{gamma:2.15},{lightness:12}]},{featureType:'road',elementType:'labels.text.fill',stylers:[{visibility:'on'},{lightness:24}]},{featureType:'road',elementType:'geometry',stylers:[{lightness:57}]}]">
+
+            <marker position="-22.3270663, -49.0765480"
+                icon="assets/images/dist/icons/marker.png"
+                animation="Animation.DROP"
+                on-click="map.showInfoWindow(event, 'info-bpt')" />
+
+            <info-window id="info-bpt">
+                <div ng-non-bindable>
+                    <div class="info-window-content">
+                        <h2 class="info-window-title">CityArt Artes Gráficas</h2>
+
+                        <address class="info-window-address">
+                            Rua Anthero Donini, 1-52 - Geisel<br/>
+                            CEP: 17015-030 - Bauru/SP<br/>
+                            <i class="fa fa-phone"></i> 14 3208-5654 | 99777-4155
+                        </address>
+                    </div>
+                </div>
+            </info-window>
+        </map>
 
     </div>
 </div>
