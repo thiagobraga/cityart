@@ -1,71 +1,68 @@
-<div class="flex">
-    <div class="col-xs-12 col-md-6">
-        <h2>Contato</h2>
+<div class="col-xs-12 col-md-6">
+    <h2>Contato</h2>
 
-        <form id="contact-form" class="form-horizontal" role="form">
-            <!-- Nome -->
-            <input id="name"
-                type="text"
-                class="form-control input-lg form-name"
-                placeholder="Informe seu nome"
-                required />
+    <form id="contact-form" class="form-horizontal" role="form">
+        <!-- Nome -->
+        <input id="name"
+            type="text"
+            class="form-control input-lg form-name"
+            placeholder="Informe seu nome"
+            required />
 
-            <!-- E-mail -->
-            <input id="email"
-                type="email"
-                class="form-control input-lg form-email"
-                placeholder="E-mail para entrarmos em contato"
-                required />
+        <!-- E-mail -->
+        <input id="email"
+            type="email"
+            class="form-control input-lg form-email"
+            placeholder="E-mail para entrarmos em contato"
+            required />
 
-            <!-- Message -->
-            <textarea id="message"
-                class="form-control input-lg form-message"
-                rows="6"
-                placeholder="Envie-nos sua dúvida, opinião ou sugestão"
-                required></textarea>
+        <!-- Message -->
+        <textarea id="message"
+            class="form-control input-lg form-message"
+            rows="6"
+            placeholder="Envie-nos sua dúvida, opinião ou sugestão"
+            required></textarea>
 
-            <!-- Actions -->
-            <div class="col-xs-12 text-right">
-                <button id="send" class="btn btn-warning btn-lg">
-                    <i class="fa fa-envelope-o email-icon"></i>
-                    <i class="fa fa-spin fa-spinner loading-icon hidden"></i>
+        <!-- Actions -->
+        <div class="col-xs-12 text-right">
+            <button id="send" class="btn btn-warning btn-lg">
+                <i class="fa fa-envelope-o email-icon"></i>
+                <i class="fa fa-spin fa-spinner loading-icon hidden"></i>
 
-                    Enviar
-                </button>
-            </div>
-        </form>
-    </div>
+                Enviar
+            </button>
+        </div>
+    </form>
+</div>
 
-    <div class="col-xs-12 col-md-6">
-        <map zoom="16"
-            class="map-md"
-            center="-22.3270663, -49.0765993"
-            disable-double-click-zoom="true"
-            disable-default-u-i="true"
-            draggable="false"
-            scrollwheel="false"
-            keyboard-shortcuts="false"
-            styles="[{featureType:'landscape',elementType:'labels',stylers:[{visibility:'off'}]},{featureType:'transit',elementType:'labels',stylers:[{visibility:'off'}]},{featureType:'poi',elementType:'labels',stylers:[{visibility:'off'}]},{featureType:'water',elementType:'labels',stylers:[{visibility:'off'}]},{featureType:'road',elementType:'labels.icon',stylers:[{visibility:'off'}]},{stylers:[{hue:'#00aaff'},{saturation:-100},{gamma:2.15},{lightness:12}]},{featureType:'road',elementType:'labels.text.fill',stylers:[{visibility:'on'},{lightness:24}]},{featureType:'road',elementType:'geometry',stylers:[{lightness:57}]}]">
+<div class="col-xs-12 col-md-6">
+    <map zoom="16"
+        class="map-md"
+        center="-22.3270663, -49.0765993"
+        disable-double-click-zoom="true"
+        disable-default-u-i="true"
+        draggable="false"
+        scrollwheel="false"
+        keyboard-shortcuts="false"
+        styles="[{featureType:'landscape',elementType:'labels',stylers:[{visibility:'off'}]},{featureType:'transit',elementType:'labels',stylers:[{visibility:'off'}]},{featureType:'poi',elementType:'labels',stylers:[{visibility:'off'}]},{featureType:'water',elementType:'labels',stylers:[{visibility:'off'}]},{featureType:'road',elementType:'labels.icon',stylers:[{visibility:'off'}]},{stylers:[{hue:'#00aaff'},{saturation:-100},{gamma:2.15},{lightness:12}]},{featureType:'road',elementType:'labels.text.fill',stylers:[{visibility:'on'},{lightness:24}]},{featureType:'road',elementType:'geometry',stylers:[{lightness:57}]}]">
 
-            <marker position="-22.3270663, -49.0765480"
-                icon="assets/images/dist/icons/marker.png"
-                animation="Animation.DROP"
-                on-click="map.showInfoWindow(event, 'info-bpt')" />
+        <marker position="-22.3270663, -49.0765480"
+            animation="Animation.DROP"
+            on-click="map.showInfoWindow(event, 'info-bpt')" />
 
-            <info-window id="info-bpt">
-                <div ng-non-bindable>
-                    <div class="info-window-content">
-                        <h2 class="info-window-title">CityArt Artes Gráficas</h2>
+        <info-window id="info-bpt">
+            <div ng-non-bindable>
+                <div class="info-window-content">
+                    <h2 class="info-window-title">CityArt Artes Gráficas</h2>
 
-                        <address class="info-window-address">
-                            Rua Anthero Donini, 1-52 - Geisel<br/>
-                            CEP: 17015-030 - Bauru/SP<br/>
-                            <i class="fa fa-phone"></i> 14 3208-5654 | 99777-4155
-                        </address>
-                    </div>
+                    <address class="info-window-address">
+                        Rua Anthero Donini, 1-52 - Geisel<br/>
+                        CEP: 17015-030 - Bauru/SP<br/>
+                        <i class="fa fa-phone"></i> 14 3208-5654 | 99777-4155
+                    </address>
                 </div>
-            </info-window>
-        </map>
+            </div>
+        </info-window>
+    </map>
 
-    </div>
 </div>
