@@ -22,14 +22,21 @@
 .owl-thumb-item {
   background:      transparent center center no-repeat;
   background-size: cover;
-  border:          0;
+  border:          4px solid transparent;
+  box-sizing:      content-box;
   padding:         0;
   margin:          0 15px;
-  width:           150px;
-  height:          140px;
+  width:           138px;
+  height:          128px;
+
+  &.active {
+    border:             4px solid transparent;
+    border-image:       linear-gradient(to bottom right, transparent 20%, #666 100%);
+    border-image-slice: 1;
+  }
 
   img {
-    width:  150px;
+    width:  138px;
     height: auto;
   }
 
@@ -41,41 +48,21 @@
 
 .owl-thumb-aguiar {
   background-image: url(/assets/images/dist/carousel/icon-portfolio-aguiar.png);
-
-  &.active {
-    background-image: url(/assets/images/dist/carousel/icon-portfolio-aguiar-on.png);
-  }
 }
 
 .owl-thumb-candy {
   background-image: url(/assets/images/dist/carousel/icon-portfolio-candy.png);
-
-  &.active {
-    background-image: url(/assets/images/dist/carousel/icon-portfolio-candy-on.png);
-  }
 }
 
 .owl-thumb-othon {
   background-image: url(/assets/images/dist/carousel/icon-portfolio-othon.png);
-
-  &.active {
-    background-image: url(/assets/images/dist/carousel/icon-portfolio-othon-on.png);
-  }
 }
 
 .owl-thumb-mirage {
   background-image: url(/assets/images/dist/carousel/icon-portfolio-mirage.png);
-
-  &.active {
-    background-image: url(/assets/images/dist/carousel/icon-portfolio-mirage-on.png);
-  }
 }
 
 .owl-thumb-nosso-tempero {
   background-image: url(/assets/images/dist/carousel/icon-portfolio-nosso-tempero.png);
-
-  &.active {
-    background-image: url(/assets/images/dist/carousel/icon-portfolio-nosso-tempero-on.png);
-  }
 }
 

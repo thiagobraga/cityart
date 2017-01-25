@@ -55,7 +55,7 @@
     <div>
         <img src="assets/images/dist/photos/processos.png" class="grid-image" />
 
-        <p class="text-center">
+        <p class="lead text-center">
             <b>TUDO QUE VOCÊ PRECISA É DE UM PRIMEIRO PASSO!</b><br/>
             Entre em contato e agende uma visita técnica<br/>
             para conhecermos o seu negócio<br/>

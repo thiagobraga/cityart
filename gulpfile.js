@@ -1,37 +1,73 @@
-var gulp       = require('gulp'),
+const gulp     = require('gulp'),
+  changed      = require('gulp-changed'),
   sass         = require('gulp-sass'),
   autoprefixer = require('gulp-autoprefixer'),
-  plumber      = require('gulp-plumber'),
   uglify       = require('gulp-uglify'),
   concat       = require('gulp-concat'),
   rename       = require('gulp-rename'),
   imagemin     = require('gulp-imagemin'),
   pngquant     = require('imagemin-pngquant'),
   browserSync  = require('browser-sync'),
-  reload       = browserSync.reload,
 
-  sass_files = {
-    src:   'assets/sass',
-    files: 'assets/sass/*.scss',
-    main:  'assets/sass/styles.scss',
-    dest:  'assets/css/dist'
+  images = {
+    src:  './assets/images/src/**/*',
+    dest: './assets/images/dist'
   },
 
-  js_files = [
-    'node_modules/jquery/dist/jquery.min.js',
-    'node_modules/bootstrap-sass/assets/javascripts/bootstrap.min.js',
-    'assets/js/src/**/*.js'
-  ],
+  styles = {
+    base:    './assets/scss',
+    src:     './assets/scss/**/*.scss',
+    dest:    './assets/css/dist',
+    options: { outputStyle: 'compressed' }
+  },
+
+  scripts = {
+    src: [
+      './node_modules/jquery/dist/jquery.min.js',
+      './node_modules/bootstrap-sass/assets/javascripts/bootstrap.min.js',
+      './assets/js/src/**/*.js'
+    ],
+    base: './assets/js/src',
+    dest: './assets/js/dist'
+  },
 
   bsFiles = [
-    '!assets/css/dist/**/*.min.css',
-    '!assets/js/dist/**/*.min.js',
-    '!application/logs/**/*.php',
-    'assets/css/dist/**/*.css',
-    'assets/js/dist/**/*.js',
-    'application/**/*.php',
-    'index.php'
+    '!./assets/css/dist/**/*.min.css',
+    '!./assets/js/dist/**/*.min.js',
+    '!./application/logs/**/*.php',
+    './assets/css/dist/**/*.css',
+    './assets/js/dist/**/*.js',
+    './assets/images/dist/**/*.{png,jpg,jpeg,gif,svg,ico}',
+    './**/*.php'
   ];
+
+// Images
+gulp.task('images', function () {
+  return gulp.src(images.src)
+    .pipe(changed(images.dest))
+    .pipe(imagemin())
+    .pipe(gulp.dest(images.dest))
+    .pipe(browserSync.reload({ stream: true }));
+});
+
+// Styles
+gulp.task('styles', function () {
+  return gulp.src(styles.src, { base: styles.base })
+    .pipe(sass(styles.options).on('error', sass.logError))
+    .pipe(autoprefixer('last 2 version', 'safari 5', 'ie 8', 'ie 9', 'opera 12.1', 'ios 6', 'android 4'))
+    .pipe(gulp.dest(styles.dest))
+    .pipe(browserSync.reload({ stream: true }));
+});
+
+// Scripts
+gulp.task('scripts', function () {
+  return gulp.src(scripts.src)
+    .pipe(concat('scripts.js'))
+    .pipe(gulp.dest(scripts.dest))
+    .pipe(rename({ suffix: '.min' }))
+    .pipe(uglify())
+    .pipe(gulp.dest(scripts.dest));
+});
 
 // BrowserSync
 gulp.task('browser-sync', function () {
@@ -47,53 +83,16 @@ gulp.task('browser-sync', function () {
   });
 });
 
-// Styles
-gulp.task('styles', function () {
-  return gulp.src(sass_files.main)
-    .pipe(plumber())
-    .pipe(sass({
-      style: 'compressed',
-      includePaths: ['assets/sass']
-    }))
-    .on('error', function (err) {
-      console.log('\nError: ' + err.message);
-      console.log('File: ' + err.fileName);
-      console.log('Line: ' + err.lineNumber + '\n');
-      this.emit('end');
-    })
-    .pipe(autoprefixer('last 2 version', 'safari 5', 'ie 8', 'ie 9', 'opera 12.1', 'ios 6', 'android 4'))
-    .pipe(gulp.dest(sass_files.dest))
-    .pipe(reload({ stream: true }));
-});
-
-// Scripts
-gulp.task('scripts', function () {
-  return gulp.src(js_files)
-    .pipe(concat('scripts.js'))
-    .pipe(gulp.dest('assets/js/dist'))
-    .pipe(rename({ suffix: '.min' }))
-    .pipe(uglify())
-    .pipe(gulp.dest('assets/js/dist'));
-});
-
-// Images
-gulp.task('images', function () {
-  return gulp.src('assets/images/src/**/*')
-    .pipe(imagemin({
-      progressive: true,
-      svgoPlugins: [{ removeViewBox: false }],
-      use: [pngquant({ quality: 80 })]
-    }))
-    .pipe(gulp.dest('assets/images/dist'));
-});
-
 // Default
-gulp.task('default', ['styles', 'scripts', 'images', 'browser-sync'], function () {
-  gulp.watch(sass_files.files, ['styles']);
-  gulp.watch(js_files, ['scripts']);
+gulp.task('default', ['images', 'styles', 'scripts'], function () {
+  gulp.start('browser-sync');
+
+  gulp.watch(images.src, ['images']);
+  gulp.watch(styles.src, ['styles']);
+  gulp.watch(scripts.src, ['scripts']);
 });
 
 // Production
 gulp.task('production', function () {
-  gulp.start('styles', 'scripts', 'images');
+  gulp.start('images', 'styles', 'scripts');
 });
