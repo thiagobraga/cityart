@@ -6,20 +6,20 @@
             <!-- Nome -->
             <input id="name"
                 type="text"
-                class="form-control input-lg"
+                class="form-control input-lg form-name"
                 placeholder="Informe seu nome"
                 required />
 
             <!-- E-mail -->
             <input id="email"
                 type="email"
-                class="form-control input-lg"
+                class="form-control input-lg form-email"
                 placeholder="E-mail para entrarmos em contato"
                 required />
 
             <!-- Message -->
             <textarea id="message"
-                class="form-control input-lg"
+                class="form-control input-lg form-message"
                 rows="6"
                 placeholder="Envie-nos sua dúvida, opinião ou sugestão"
                 required></textarea>
@@ -38,6 +38,6 @@
     </div>
 
     <div class="col-xs-12 col-md-6">
-        mapa caraleo
+
     </div>
 </div>
