@@ -4,7 +4,7 @@
     <!-- HEAD -->
     <?php $this->load->view('_template/head') ?>
 
-    <body>
+    <body ng-app="ngMap" class="ng-scope">
         <!-- NAVBAR -->
         <?php $this->load->view('_template/navbar') ?>
 

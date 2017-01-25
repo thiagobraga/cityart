@@ -1,26 +1,22 @@
 map {
   background-color: #e5e3df;
   display:          block;
-
-  img[src*="images/google4.png"],
-  .gmnoprint,
-  .gm-style-cc {
-    display: none;
-  }
 }
 
 .map-lg { height: 650px; }
-.map-md { height: 500px; }
+.map-md { height: 408px; }
 .map-sm { height: 300px; }
 .map-xs { height: 150px; }
 
 .info-window-title {
+  color:         #666;
   font-size:     20px;
   margin-top:    5px;
   margin-bottom: 10px;
 }
 
 .info-window-address {
+  color:         #999;
   font-family:   'Futura Bk BT';
   font-size:     16px;
   margin-bottom: 5px;
