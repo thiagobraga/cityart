@@ -1,4 +1,4 @@
-<div class="col-xs-12 col-md-6">
+<div class="col-xs-12 col-md-6 contact-page">
     <h2>Contato</h2>
 
     <form id="contact-form" class="form-horizontal" role="form">
@@ -24,7 +24,7 @@
             required></textarea>
 
         <!-- Actions -->
-        <div class="col-xs-12 text-right">
+        <div class="text-right">
             <button id="send" class="btn btn-warning btn-lg">
                 <i class="fa fa-envelope-o email-icon"></i>
                 <i class="fa fa-spin fa-spinner loading-icon hidden"></i>
@@ -38,19 +38,19 @@
 <div class="col-xs-12 col-md-6">
     <map zoom="16"
         class="map-md"
-        center="-22.3270663, -49.0765993"
+        center="-22.3320145, -49.0302082"
         disable-double-click-zoom="true"
         disable-default-u-i="true"
-        draggable="false"
-        scrollwheel="false"
-        keyboard-shortcuts="false"
+        draggable="true"
+        scrollwheel="true"
+        keyboard-shortcuts="true"
         styles="[{featureType:'landscape',elementType:'labels',stylers:[{visibility:'off'}]},{featureType:'transit',elementType:'labels',stylers:[{visibility:'off'}]},{featureType:'poi',elementType:'labels',stylers:[{visibility:'off'}]},{featureType:'water',elementType:'labels',stylers:[{visibility:'off'}]},{featureType:'road',elementType:'labels.icon',stylers:[{visibility:'off'}]},{stylers:[{hue:'#00aaff'},{saturation:-100},{gamma:2.15},{lightness:12}]},{featureType:'road',elementType:'labels.text.fill',stylers:[{visibility:'on'},{lightness:24}]},{featureType:'road',elementType:'geometry',stylers:[{lightness:57}]}]">
 
-        <marker position="-22.3270663, -49.0765480"
+        <marker position="-22.331878, -49.029618"
             animation="Animation.DROP"
-            on-click="map.showInfoWindow(event, 'info-bpt')" />
+            on-click="map.showInfoWindow(event, 'map-info')" />
 
-        <info-window id="info-bpt">
+        <info-window id="map-info">
             <div ng-non-bindable>
                 <div class="info-window-content">
                     <h2 class="info-window-title">CityArt Artes Gráficas</h2>
