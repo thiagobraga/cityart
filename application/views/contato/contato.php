@@ -36,21 +36,21 @@
 </div>
 
 <div class="col-xs-12 col-md-6">
-    <map zoom="16"
-        class="map-md"
-        center="-22.3320145, -49.0302082"
+    <map class="map-md"
+        center="-22.3319145, -49.0296082"
+        zoom="17"
         disable-double-click-zoom="true"
         disable-default-u-i="true"
         draggable="true"
         scrollwheel="true"
         keyboard-shortcuts="true"
-        styles="[{featureType:'landscape',elementType:'labels',stylers:[{visibility:'off'}]},{featureType:'transit',elementType:'labels',stylers:[{visibility:'off'}]},{featureType:'poi',elementType:'labels',stylers:[{visibility:'off'}]},{featureType:'water',elementType:'labels',stylers:[{visibility:'off'}]},{featureType:'road',elementType:'labels.icon',stylers:[{visibility:'off'}]},{stylers:[{hue:'#00aaff'},{saturation:-100},{gamma:2.15},{lightness:12}]},{featureType:'road',elementType:'labels.text.fill',stylers:[{visibility:'on'},{lightness:24}]},{featureType:'road',elementType:'geometry',stylers:[{lightness:57}]}]">
+        styles="[{'featureType':'all','elementType':'labels','stylers':[{'visibility':'on'}]},{'featureType':'all','elementType':'labels.text.fill','stylers':[{'saturation':36},{'color':'#000000'},{'lightness':40}]},{'featureType':'all','elementType':'labels.text.stroke','stylers':[{'visibility':'on'},{'color':'#000000'},{'lightness':16}]},{'featureType':'all','elementType':'labels.icon','stylers':[{'visibility':'off'}]},{'featureType':'administrative','elementType':'geometry.fill','stylers':[{'color':'#000000'},{'lightness':20}]},{'featureType':'administrative','elementType':'geometry.stroke','stylers':[{'color':'#000000'},{'lightness':17},{'weight':1.2}]},{'featureType':'administrative.country','elementType':'labels.text.fill','stylers':[{'color':'#e5c163'}]},{'featureType':'administrative.locality','elementType':'labels.text.fill','stylers':[{'color':'#c4c4c4'}]},{'featureType':'administrative.neighborhood','elementType':'labels.text.fill','stylers':[{'color':'#e5c163'}]},{'featureType':'landscape','elementType':'geometry','stylers':[{'color':'#000000'},{'lightness':20}]},{'featureType':'poi','elementType':'geometry','stylers':[{'color':'#000000'},{'lightness':21},{'visibility':'on'}]},{'featureType':'poi.business','elementType':'geometry','stylers':[{'visibility':'on'}]},{'featureType':'road.highway','elementType':'geometry.fill','stylers':[{'color':'#e5c163'},{'lightness':'0'}]},{'featureType':'road.highway','elementType':'geometry.stroke','stylers':[{'visibility':'off'}]},{'featureType':'road.highway','elementType':'labels.text.fill','stylers':[{'color':'#ffffff'}]},{'featureType':'road.highway','elementType':'labels.text.stroke','stylers':[{'color':'#e5c163'}]},{'featureType':'road.arterial','elementType':'geometry','stylers':[{'color':'#000000'},{'lightness':18}]},{'featureType':'road.arterial','elementType':'geometry.fill','stylers':[{'color':'#575757'}]},{'featureType':'road.arterial','elementType':'labels.text.fill','stylers':[{'color':'#ffffff'}]},{'featureType':'road.arterial','elementType':'labels.text.stroke','stylers':[{'color':'#2c2c2c'}]},{'featureType':'road.local','elementType':'geometry','stylers':[{'color':'#000000'},{'lightness':16}]},{'featureType':'road.local','elementType':'labels.text.fill','stylers':[{'color':'#999999'}]},{'featureType':'transit','elementType':'geometry','stylers':[{'color':'#000000'},{'lightness':19}]},{'featureType':'water','elementType':'geometry','stylers':[{'color':'#000000'},{'lightness':17}]}]">
 
         <marker position="-22.331878, -49.029618"
             animation="Animation.DROP"
             on-click="map.showInfoWindow(event, 'map-info')" />
 
-        <info-window id="map-info">
+        <info-window id="map-info" hidden>
             <div ng-non-bindable>
                 <div class="info-window-content">
                     <h2 class="info-window-title">CityArt Artes Gráficas</h2>

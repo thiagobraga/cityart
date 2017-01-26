@@ -3,6 +3,11 @@ map {
   display:          block;
 }
 
+.gm-style-cc,
+map .gm-style img[src*="google_white5.png"] {
+  display: none !important;
+}
+
 .map-lg { height: 650px; }
 .map-md { height: 408px; }
 .map-sm { height: 300px; }
