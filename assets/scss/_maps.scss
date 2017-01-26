@@ -1,11 +1,15 @@
 map {
-  background-color: #e5e3df;
+  background-color: #444;
   display:          block;
 }
 
 .gm-style-cc,
 map .gm-style img[src*="google_white5.png"] {
   display: none !important;
+}
+
+map > marker ~ div > div {
+  background-color: #444 !important;
 }
 
 .map-lg { height: 650px; }
