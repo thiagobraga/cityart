@@ -12,8 +12,8 @@
     [class*=owl-] {
       color:     #444;
       position:  absolute;
-      top:       -160px;
-      font-size: 5em;
+      top:       -155px;
+      font-size: 4.5em;
 
       &,
       &:hover {
@@ -22,11 +22,11 @@
     }
 
     .owl-next {
-      right: 0;
+      right: 10px;
     }
 
     .owl-prev {
-      left: 0;
+      left: 10px;
     }
   }
 }
