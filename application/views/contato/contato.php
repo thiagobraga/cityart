@@ -56,8 +56,8 @@
                     <h2 class="info-window-title">CityArt Artes Gráficas</h2>
 
                     <address class="info-window-address">
-                        Rua Anthero Donini, 1-52 - Geisel<br/>
-                        CEP: 17015-030 - Bauru/SP<br/>
+                        Rua Anthero Donnini, 1-80<br/>
+                        CEP: 17033-660 - Bauru/SP<br/>
                         <i class="fa fa-phone"></i> 14 3208-5654 | 99777-4155
                     </address>
                 </div>
