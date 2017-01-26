@@ -20,7 +20,7 @@
         <textarea id="message"
             class="form-control input-lg form-message"
             rows="6"
-            placeholder="Envie-nos sua dúvida, opinião ou sugestão"
+            placeholder="Envie sua mensagem"
             required></textarea>
 
         <!-- Actions -->
