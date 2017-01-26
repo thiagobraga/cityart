@@ -163,10 +163,11 @@ ul {
 }
 
 hr {
-  margin-top:    20px;
-  margin-bottom: 30px;
   border:        0;
   border-top:    3px solid #221f1f;
+  margin-top:    20px;
+  margin-bottom: 20px;
+  width:         calc(100% - 25px);
 }
 
 .content {
