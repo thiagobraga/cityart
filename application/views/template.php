@@ -12,7 +12,7 @@
         <?php $this->load->view('_template/header') ?>
 
         <!-- CONTENT -->
-        <div class="content container">
+        <div class="container content <?php echo $controller ?>">
             <?php $this->load->view($content) ?>
         </div>
 
