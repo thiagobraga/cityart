@@ -24,7 +24,8 @@
     <div class="text-justify">
         <h2>Fluxo de Trabalho</h2>
         <p>Com conhecimento técnico em processos gráficos, estamos preparados para atender a sua demanda de serviços, lidando diretamente com vendedores, representantes e clientes, controlando o fluxo de solicitações e envio de provas bem como conferência e fechamento de arquivo, trabalhando em contato com clicherias e bureaus de serviços, solicitando clichês, fotolitos, chapas, facas, hot-stamp e outros.</p>
-        <ul>
+        <br/>
+        <ul class="list-services">
             <li>Desenvolvimento, Arte final</li>
             <li>Envio de Provas</li>
             <li>Contato direto com equipe de vendas</li>
