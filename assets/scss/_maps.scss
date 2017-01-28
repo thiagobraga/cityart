@@ -1,6 +1,11 @@
 map {
   background-color: #444;
   display:          block;
+
+  &,
+  & > div {
+    border-radius: 3px;
+  }
 }
 
 .gm-style-cc,
@@ -13,7 +18,7 @@ map > marker ~ div > div {
 }
 
 .map-lg { height: 650px; }
-.map-md { height: 408px; }
+.map-md { height: 368px; }
 .map-sm { height: 300px; }
 .map-xs { height: 150px; }
 
