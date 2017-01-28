@@ -8,7 +8,7 @@
     </div>
 
     <div>
-        <img src="assets/images/dist/photos/processo-criativo.jpg" class="grid-image" />
+        <img src="assets/images/dist/photos/processo-criativo.jpg" class="grid-image image-shadow" />
     </div>
 </div>
 

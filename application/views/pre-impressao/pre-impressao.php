@@ -10,7 +10,7 @@
     </div>
 
     <div>
-        <img src="assets/images/dist/photos/assessoria.jpg" class="grid-image" />
+        <img src="assets/images/dist/photos/assessoria.jpg" class="grid-image image-shadow" />
     </div>
 </div>
 
