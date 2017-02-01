@@ -13,7 +13,6 @@
 
     <!-- ICONS -->
     <link href="<?php echo base_url('assets/images/dist/favicons/favicon.ico') ?>" rel="shortcut icon" />
-    <link href="<?php echo base_url('favicon.ico') ?>" rel="shortcut icon" />
     <link href="<?php echo base_url('assets/images/dist/favicons/apple-touch-icon.png') ?>" rel="apple-touch-icon" sizes="57x57" />
     <link href="<?php echo base_url('assets/images/dist/favicons/apple-touch-icon-76x76.png') ?>" rel="apple-touch-icon" sizes="76x76" />
     <link href="<?php echo base_url('assets/images/dist/favicons/apple-touch-icon-120x120.png') ?>" rel="apple-touch-icon" sizes="120x120" />
