@@ -11,16 +11,16 @@ class Design extends MY_Controller
             'page'     => 'Design',
             'content'  => 'design/design',
             'carousel' => [
-                ['aguiar', 'Aguiar Advogados'],
-                ['neusa', 'Neusa'],
-                ['othon', 'Othon Management & Training'],
-                ['candy', 'Candy Toy Brinquedos e Doces'],
-                ['green', 'Green Brothers'],
+                ['aguiar',        'Aguiar Advogados'],
+                ['neusa',         'Neusa'],
+                ['othon',         'Othon Management & Training'],
+                ['candy',         'Candy Toy Brinquedos e Doces'],
+                ['green',         'Green Brothers'],
                 ['nosso-tempero', 'Nosso Tempero'],
-                ['mirage', 'Mirage'],
-                ['iron', 'Iron T. Jorge Fotografia'],
-                ['brilar', 'Brilar'],
-                ['mayara', 'Mayara Rochelle Store']
+                ['mirage',        'Mirage'],
+                ['iron',          'Iron T. Jorge Fotografia'],
+                ['brilar',        'Brilar'],
+                ['mayara',        'Mayara Rochelle Store']
             ]
         ]);
 

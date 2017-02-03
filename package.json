@@ -1,16 +1,39 @@
 {
   "name": "cityart",
-  "version": "0.0.0",
-  "description": "The CityArt site repository",
-  "author": "Thiago Braga <contato@thiagobraga.org>",
+  "version": "0.0.8",
+  "description": "Site da empresa CityArt Artes Gráficas | Design & Pré-Impressão",
+  "main": "index.php",
+  "dependencies": {},
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
   "repository": {
     "type": "git",
-    "url": "git@github.com:thiagobraga/cityart.git"
+    "url": "git+https://github.com/thiagobraga/cityart.git"
   },
-  "engines": {
-    "node": "0.8.x",
-    "npm": "1.1.x"
+  "keywords": [
+    "design",
+    "bauru",
+    "artes",
+    "gráficas",
+    "arte",
+    "final",
+    "panfletos",
+    "cartazes",
+    "banners",
+    "cartões",
+    "envelopes",
+    "papelaria",
+    "identidade",
+    "visual"
+  ],
+  "author": "Thiago Braga <contato@thiagobraga.org>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/thiagobraga/cityart/issues"
   },
+  "homepage": "http://cityart.com.br",
   "scripts": {
     "start": "gulp"
   },
@@ -22,9 +45,7 @@
     "ionicons": "2.0.1",
     "jquery": "3.1.1",
     "ngmap": "1.17.1",
-    "noty": "2.4.0",
-    "owl.carousel": "2.2.0",
-    "owl.carousel2.thumbs": "0.1.8"
+    "noty": "2.4.0"
   },
   "devDependencies": {
     "browser-sync": "2.18.6",
