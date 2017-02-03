@@ -12,18 +12,20 @@
     </div>
 </div>
 
-<div id="thumbnails" class="flexslider">
-    <ul class="slides">
-        <?php foreach ($carousel as $key => $item) { ?>
-            <li><img src="assets/images/dist/carousel/icon-<?php echo $item[0] ?>.jpg" alt="<?php echo $item[1] ?>" /></li>
-        <?php } ?>
-    </ul>
-</div>
+<div class="carousel-images">
+    <div id="thumbnails" class="flexslider">
+        <ul class="slides">
+            <?php foreach ($carousel as $key => $item) { ?>
+                <li><img src="assets/images/dist/carousel/icon-<?php echo $item[0] ?>.jpg" alt="<?php echo $item[1] ?>" /></li>
+            <?php } ?>
+        </ul>
+    </div>
 
-<div id="carousel" class="flexslider">
-    <ul class="slides">
-        <?php foreach ($carousel as $key => $item) { ?>
-            <li><img src="assets/images/dist/carousel/portfolio-<?php echo $item[0] ?>.png" alt="<?php echo $item[1] ?>" /></li>
-        <?php } ?>
-    </ul>
+    <div id="carousel" class="flexslider">
+        <ul class="slides">
+            <?php foreach ($carousel as $key => $item) { ?>
+                <li><img src="assets/images/dist/carousel/portfolio-<?php echo $item[0] ?>.png" alt="<?php echo $item[1] ?>" /></li>
+            <?php } ?>
+        </ul>
+    </div>
 </div>
