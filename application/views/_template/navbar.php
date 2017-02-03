@@ -32,9 +32,6 @@
                 <li><a href="tel:+14997774155" target="_blank">
                     <i class="ionicons ion-social-whatsapp text-warning"></i>
                 </a></li>
-                <li><a href="callto:marcel.city" target="_blank">
-                    <i class="fa fa-skype text-warning"></i>
-                </a></li>
                 <li><a href="http://facebook.com/cityart.artesgraficas" target="_blank">
                     <i class="fa fa-facebook-official text-warning"></i>
                 </a></li>
