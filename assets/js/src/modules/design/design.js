@@ -1,25 +1,22 @@
 $(function () {
   'use strict';
 
-  var owl = $('.owl-carousel');
 
-  if (owl.length) {
-    owl.owlCarousel({
-      center:              true,
-      dots:                false,
-      items:               1,
-      loop:                true,
-      margin:              0,
-      nav:                 true,
-      responsiveClass:     true,
-      thumbs:              true,
-      thumbsPrerendered:   true,
+  $('#carousel').flexslider({
+    animation: 'slide',
+    controlNav: false,
+    animationLoop: false,
+    slideshow: false,
+    sync: '#thumbnails'
+  });
 
-      navText: [
-        '<i class="ionicons ion-arrow-left-b"></i>',
-        '<i class="ionicons ion-arrow-right-b"></i>'
-      ]
-    });
-  }
-
+  $('#thumbnails').flexslider({
+    animation: 'slide',
+    controlNav: false,
+    animationLoop: false,
+    slideshow: false,
+    itemWidth: 210,
+    itemMargin: 5,
+    asNavFor: '#carousel'
+  });
 });

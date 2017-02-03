@@ -12,20 +12,23 @@ class Design extends MY_Controller
             'content'  => 'design/design',
             'carousel' => [
                 ['aguiar', 'Aguiar Advogados'],
-                ['candy', 'Candy Toy Brinquedos e Doces'],
+                ['neusa', 'Neusa'],
                 ['othon', 'Othon Management & Training'],
+                ['candy', 'Candy Toy Brinquedos e Doces'],
+                ['green', 'Green Brothers'],
+                ['nosso-tempero', 'Nosso Tempero'],
                 ['mirage', 'Mirage'],
-                ['nosso-tempero', 'Nosso Tempero']
+                ['iron', 'Iron T. Jorge Fotografia'],
+                ['brilar', 'Brilar'],
+                ['mayara', 'Mayara Rochelle Store']
             ]
         ]);
 
         $this->data['title'] = $this->data['title'] . ' | ' . $this->data['page'];
 
         MY_Controller::loadAssets([
-            'owl.carousel/dist/assets/owl.carousel.min.css',
-            'owl.carousel/dist/assets/owl.theme.default.min.css',
-            'owl.carousel/dist/owl.carousel.min.js',
-            'owl.carousel2.thumbs/dist/owl.carousel2.thumbs.min.js',
+            'flexslider/flexslider.css',
+            'flexslider/jquery.flexslider-min.js',
         ]);
 
         $this->load->view('template', $this->data);
