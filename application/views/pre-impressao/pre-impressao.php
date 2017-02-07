@@ -1,4 +1,4 @@
-<div class="flex">
+<div class="content-wrapper">
     <div class="text-justify">
         <h2>Assessoria</h2>
         <p>
@@ -16,7 +16,7 @@
 
 <hr/>
 
-<div class="flex">
+<div class="content-wrapper">
     <div>
         <img src="assets/images/dist/photos/fluxo.png" class="grid-image" />
     </div>

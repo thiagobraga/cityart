@@ -1,4 +1,4 @@
-<div class="flex">
+<div class="content-wrapper">
     <div class="text-justify">
         <h2>Apresentação</h2>
         <p>CityArt é formada por uma equipe profissional que tem por objetivo cuidar do projeto visual da sua empresa, garantindo o sucesso e crescimento do seu negócio.</p>
