@@ -105,10 +105,10 @@ class MY_Controller extends CI_Controller
 
                 // Call the minified version of the file.
                 if ($minify === true) {
-                    $files[$i] .= '.min.';
+                    $files[$i] .= '.min';
                 }
 
-                $files[$i] .= $extension;
+                $files[$i] .= '.' . $extension;
                 $mktime     = filemtime($path);
                 $files[$i] .= '?v=' . $mktime;
             }
