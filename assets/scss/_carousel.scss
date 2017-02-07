@@ -1,4 +1,90 @@
 .carousel-images .flexslider {
   background: none;
   border:     none;
+  margin:     0;
+  padding:    15px;
+
+  .flex-direction-nav {
+    .flex-next,
+    .flex-prev {
+      opacity:    1;
+
+      &:before {
+        color:       #333;
+        font-family: 'Ionicons';
+        font-size:   4.6em;
+        text-shadow: none;
+        transition:  color ease-in-out 0.2s;
+      }
+    }
+
+    .flex-prev {
+      left: 15px;
+
+      &:before {
+        content: '\f107';
+      }
+    }
+
+    .flex-next {
+      right: 15px;
+
+      &:before {
+        content: '\f10a';
+      }
+    }
+  }
+
+  &:hover {
+    .flex-direction-nav {
+      .flex-next,
+      .flex-prev {
+        opacity: 1;
+
+        &:before {
+          color: #555;
+        }
+      }
+
+      .flex-prev {
+        left: 15px;
+      }
+
+      .flex-next {
+        right: 15px;
+      }
+    }
+  }
+}
+
+.thumbnails {
+  .thumbnails-wrapper {
+    border-top:    3px solid #221f1f;
+    border-bottom: 3px solid #221f1f;
+    padding:       25px 80px;
+  }
+
+  .slides {
+    > li {
+      border:     4px solid transparent;
+      box-sizing: content-box;
+      padding:    0;
+      margin:     0;
+
+      &.flex-active-slide {
+        border:             4px solid transparent;
+        border-image:       linear-gradient(to bottom right, transparent 20%, #666 100%);
+        border-image-slice: 1;
+      }
+
+      &:active,
+      &:focus {
+        outline: none;
+      }
+
+      img {
+        cursor: pointer;
+      }
+    }
+  }
 }

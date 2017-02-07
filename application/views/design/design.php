@@ -1,4 +1,4 @@
-<div class="flex">
+<div class="content-wrapper">
     <div class="text-justify">
         <h2>Processo Criativo</h2>
         <p>Criatividade e inspiração são as chaves para o sucesso de um projeto visual. Com uma linguagem adequada, a sua marca se destaca no mercado e ganha posicionamento em relação ao público-alvo que pretende atingir.</p>
@@ -13,15 +13,17 @@
 </div>
 
 <div class="carousel-images">
-    <div id="thumbnails" class="flexslider">
-        <ul class="slides">
-            <?php foreach ($carousel as $key => $item) { ?>
-                <li><img src="assets/images/dist/carousel/icon-<?php echo $item[0] ?>.jpg" alt="<?php echo $item[1] ?>" /></li>
-            <?php } ?>
-        </ul>
+    <div class="flexslider thumbnails">
+        <div id="thumbnails" class="thumbnails-wrapper">
+            <ul class="slides">
+                <?php foreach ($carousel as $key => $item) { ?>
+                    <li><img src="assets/images/dist/carousel/icon-<?php echo $item[0] ?>.jpg" alt="<?php echo $item[1] ?>" /></li>
+                <?php } ?>
+            </ul>
+        </div>
     </div>
 
-    <div id="carousel" class="flexslider">
+    <div id="carousel" class="flexslider carousel">
         <ul class="slides">
             <?php foreach ($carousel as $key => $item) { ?>
                 <li><img src="assets/images/dist/carousel/portfolio-<?php echo $item[0] ?>.png" alt="<?php echo $item[1] ?>" /></li>
