@@ -29,7 +29,7 @@ class Design extends MY_Controller
         MY_Controller::loadAssets([
             'flexslider/flexslider.css',
             'flexslider/jquery.flexslider-min.js',
-        ]);
+        ], false);
 
         $this->load->view('template', $this->data);
     }
