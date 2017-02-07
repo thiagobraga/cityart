@@ -1,0 +1,37 @@
+map {
+  background-color: #444;
+  display:          block;
+
+  &,
+  & > div {
+    border-radius: 3px;
+  }
+}
+
+.gm-style-cc,
+map .gm-style img[src*="google_white5.png"] {
+  display: none !important;
+}
+
+map > marker ~ div > div {
+  background-color: #444 !important;
+}
+
+.map-lg { height: 650px; }
+.map-md { height: 368px; }
+.map-sm { height: 300px; }
+.map-xs { height: 150px; }
+
+.info-window-title {
+  color:         #666;
+  font-size:     20px;
+  margin-top:    5px;
+  margin-bottom: 10px;
+}
+
+.info-window-address {
+  color:         #999;
+  font-family:   'Futura Bk BT';
+  font-size:     16px;
+  margin-bottom: 5px;
+}

@@ -1,8 +1,14 @@
 <header>
-    <section class="container">
-        <img src="assets/images/logo/logo-white.png"
-            class="logo"
-            width="300"
-            height="113" />
-    </section>
+    <div class="container">
+        <div class="col-xs-12 col-sm-6">
+            <a href="<?php echo base_url() ?>" class="logo"></a>
+        </div>
+
+        <div class="hidden-xs col-sm-6">
+            <div class="services">
+                <a href="<?php echo base_url('design') ?>"><i class="icon-design"></i> Design</a>
+                <a href="<?php echo base_url('pre-impressao') ?>"><i class="icon-press"></i> Pré-Impressão</a>
+            </div>
+        </div>
+    </div>
 </header>
