@@ -98,12 +98,12 @@ class MY_Controller extends CI_Controller
             // Get the path info of the file and extract variables.
             extract(pathinfo($files[$i]));
 
-            // In production environments, the minified version of the
-            // file will be called and the make time of file will be
+            // In production environments, the make time of file will be
             // concatenated in the path to avoid caching problems.
             if (ENVIRONMENT === 'production') {
                 $files[$i]  = $dirname . '/' . $filename;
 
+                // Call the minified version of the file.
                 if ($minify === true) {
                     $files[$i] .= '.min.';
                 }
