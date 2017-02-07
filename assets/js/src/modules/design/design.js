@@ -1,21 +1,28 @@
 $(function () {
   'use strict';
 
-  $('#carousel').flexslider({
-    animation:     'slide',
-    animationLoop: false,
-    controlNav:    false,
-    slideshow:     false,
-    sync:          '#thumbnails'
-  });
+  if ($('#thumbnails')) {
+    $('#thumbnails').flexslider({
+      animation:     'slide',
+      animationLoop: true,
+      asNavFor:      '#carousel',
+      controlNav:    false,
+      itemMargin:    25,
+      itemWidth:     146, // 138 + 8 (borders)
+      slideshow:     false,
+      prevText:      '',
+      nextText:      ''
+    });
 
-  $('#thumbnails').flexslider({
-    animation:     'slide',
-    animationLoop: false,
-    asNavFor:      '#carousel',
-    controlNav:    false,
-    itemMargin:    5,
-    itemWidth:     210,
-    slideshow:     false
-  });
+    $('#carousel').flexslider({
+      animation:     'slide',
+      animationLoop: true,
+      directionNav:  false,
+      controlNav:    false,
+      slideshow:     false,
+      smoothHeight:  true,
+      sync:          '#thumbnails'
+    });
+  }
+
 });
