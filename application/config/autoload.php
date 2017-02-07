@@ -66,10 +66,7 @@ $autoload['libraries'] = array(
  *
  *  $autoload['helper'] = array('url', 'file');
  */
-$autoload['helper'] = array(
-    'url',
-    'utility'
-);
+$autoload['helper'] = array('url');
 
 /**
  * -------------------------------------------------------------------
@@ -83,7 +80,7 @@ $autoload['helper'] = array(
  * config files.  Otherwise, leave it blank.
  *
  */
-$autoload['config'] = array('bptadvogados');
+$autoload['config'] = array();
 
 /**
  * -------------------------------------------------------------------
