@@ -53,3 +53,22 @@
     no-repeat
     center center;
 }
+
+.navbar-toggle {
+  background-color: $brand-warning;
+  border:           1px solid $brand-warning;
+
+  .icon-bar {
+    background-color: #fff;
+  }
+}
+
+.navbar-icons {
+  @media (max-width: 767px) {
+    text-align: center;
+
+    li {
+      display: inline-block;
+    }
+  }
+}

@@ -25,7 +25,7 @@
                 <?php } ?>
             </ul>
 
-            <ul class="nav navbar-nav navbar-right">
+            <ul class="nav navbar-nav navbar-right navbar-icons">
                 <li><a href="mailto:contato@cityart.com.br" target="_blank">
                     <i class="fa fa-envelope text-warning"></i>
                 </a></li>
