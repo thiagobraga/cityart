@@ -39,7 +39,7 @@
 
 <hr/>
 
-<div class="flex processos">
+<div class="content-wrapper processos">
     <div class="text-justify">
         <h2>Diferentes Processos</h2>
         <p>Seja em offset, como folhetos, cartões, catálogos, cartazes, folders, pastas, embalagens; em flexografia, com rótulos, etiquetas, adesivos e embalagens flexíveis, ou até mesmo serigrafia e contéudo digital, nós estamos prontos para desenvolver o seu produto, com foco na produção gráfica, planejando e direcionando corretamente o projeto.</p>

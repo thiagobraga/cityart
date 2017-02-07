@@ -1,8 +1,12 @@
 $(function () {
   'use strict';
 
-  if ($('#thumbnails')) {
-    $('#thumbnails').flexslider({
+  var options,
+    thumbnails = $('#thumbnails'),
+    carousel = $('#carousel');
+
+  if (thumbnails.length) {
+    options = {
       animation:     'slide',
       animationLoop: true,
       asNavFor:      '#carousel',
@@ -12,9 +16,11 @@ $(function () {
       slideshow:     false,
       prevText:      '',
       nextText:      ''
-    });
+    };
 
-    $('#carousel').flexslider({
+    thumbnails.flexslider(options);
+
+    carousel.flexslider({
       animation:     'slide',
       animationLoop: true,
       directionNav:  false,

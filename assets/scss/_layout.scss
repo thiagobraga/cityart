@@ -109,7 +109,15 @@ ul {
 
   .footer-content {
     border-top: 3px solid #221f1f;
-    padding:    20px;
+    padding:    20px 0;
+
+    span {
+      display: inline-block;
+    }
+
+    .footer-phone {
+      margin-right: 10px;
+    }
   }
 }
 
