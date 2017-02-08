@@ -47,7 +47,7 @@ class MY_Controller extends CI_Controller
             'controller'  => $this->router->fetch_class(),
             'method'      => $this->router->fetch_method(),
             'title'       => 'CityArt Artes Gráficas | Design & Pré-Impressão',
-            'description' => 'Empresa bauruense no ramo de design e desenvolvimento web com visão de mercado, usabilidade e simplicidade. Também prestamos consultoria e suporte para essas áreas.',
+            'description' => 'Criação e desenvolvimento de peças gráficas, identidade visual, campanhas e afins. Assessoria técnica e serviços de pré-impressão para gráficas e empresas similares.',
             'keywords'    => 'design, sites, bauru, desenvolvimento web'
         ];
 
