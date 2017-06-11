@@ -2,25 +2,41 @@
 
 defined('BASEPATH') || exit('No direct script access allowed');
 
-class Design extends MY_Controller
-{
+/**
+ * Design
+ */
+class Design extends MY_Controller {
 
-    public function index()
-    {
+    /**
+     * Carrega a página de design.
+     *
+     * @return  void
+     */
+    public function index() {
         $this->data = array_merge($this->data, [
             'page'     => 'Design',
             'content'  => 'design/design',
             'carousel' => [
-                ['aguiar',        'Aguiar Advogados'],
-                ['neusa',         'Neusa'],
-                ['othon',         'Othon Management & Training'],
-                ['candy',         'Candy Toy Brinquedos e Doces'],
-                ['green',         'Green Brothers'],
+                ['aguiar', 'Aguiar Advogados'],
+                ['neusa', 'Neusa'],
+                ['othon', 'Othon Management & Training'],
+                ['candy', 'Candy Toy Brinquedos e Doces'],
+                ['green', 'Green Brothers'],
                 ['nosso-tempero', 'Nosso Tempero'],
-                ['mirage',        'Mirage'],
-                ['iron',          'Iron T. Jorge Fotografia'],
-                ['brilar',        'Brilar'],
-                ['mayara',        'Mayara Rochelle Store']
+                ['mirage', 'Mirage'],
+                ['iron', 'Iron T. Jorge Fotografia'],
+                ['brilar', 'Brilar'],
+                ['mayara', 'Mayara Rochelle Store'],
+                ['atelier', 'Atelier Valentinna'],
+                ['brunna', 'Estúdio Brunna Marques'],
+                ['estetica', 'Estética & Cia. Cuidado Feminino'],
+                ['kelly', 'Kelly Karina Make Up'],
+                ['nobre', 'Nobre Minas Cachaça'],
+                ['concreto', 'Concreto Imóveis'],
+                ['basecar', 'Basecar Estética Automotiva'],
+                ['versatil', 'Versátil Etiquetas Inteligentes'],
+                ['miragebomba', 'Mirage Bomba Capilar'],
+                ['mjrn', 'Marin, Jordão, Romeiro & Ribeiro Neto'],
             ]
         ]);
 
@@ -33,5 +49,4 @@ class Design extends MY_Controller
 
         $this->load->view('template', $this->data);
     }
-
 }
