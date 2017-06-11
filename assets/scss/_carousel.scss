@@ -5,9 +5,15 @@
   padding:    15px;
 
   .flex-direction-nav {
+    a {
+      width:  inherit;
+      height: inherit;
+      top:    38%;
+    }
+
     .flex-next,
     .flex-prev {
-      opacity:    1;
+      opacity: 1;
 
       &:before {
         color:       #333;
