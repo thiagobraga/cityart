@@ -37,7 +37,7 @@
 
 <div class="col-xs-12 col-md-7">
     <h2>
-        <i class="fa fa-phone icon"></i> 14 3208-5654
+        <i class="fa fa-phone icon"></i> 14 3206-7602
         <i class="fa fa-whatsapp icon"></i> 14 99777-4155
     </h2>
 
