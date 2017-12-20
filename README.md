@@ -2,16 +2,19 @@
 
 ## Requisitos
 
-- node.js
-- gulp
+- Docker
+- Docker Compose
 
 ## Instalação
 
 ```
 git clone git@github.com:thiagobraga/cityart.git
 cd cityart
-./install.sh
+cp .env.example .env
+docker-compose up
 ```
+
+O arquivo `.env` deverá ser editado com as informações necessárias por ambiente, como usuário e senha do banco, portas específicas por serviço, etc.
 
 ## Apresentação
 
@@ -22,4 +25,3 @@ Buscamos soluções que possam ir além das expectativas, interpretando a necess
 Profissionais com mais de quinze anos no mercado gráfico lidam diretamente com a sua marca buscando destaque para sua empresa.
 
 A tarefa pressupõe sobretudo, garantir qualidade para o seu projeto e confiança em nosso trabalho, para isso, lançamos mão de todo o conhecimento, responsabilidade e cuidado especial!
-
