@@ -2,8 +2,8 @@
 
 ## Requisitos
 
-- Docker
-- Docker Compose
+- [Docker](https://docs.docker.com/install)
+- [Docker Compose](https://docs.docker.com/compose/install)
 
 ## Instalação
 
@@ -11,10 +11,13 @@
 git clone git@github.com:thiagobraga/cityart.git
 cd cityart
 cp .env.example .env
-docker-compose up
 ```
 
-O arquivo `.env` deverá ser editado com as informações necessárias por ambiente, como usuário e senha do banco, portas específicas por serviço, etc.
+Editar o arquivo `.env` com informações necessárias por ambiente, como usuário e senha do banco, portas específicas por serviço, etc. Em seguida:
+
+```
+docker-compose up
+```
 
 ## Apresentação
 
