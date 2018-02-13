@@ -32,7 +32,7 @@
                 <li><a href="tel:+14997774155" target="_blank">
                     <i class="ionicons ion-social-whatsapp text-warning"></i>
                 </a></li>
-                <li><a href="http://facebook.com/cityart.artesgraficas" target="_blank">
+                <li><a href="https://www.facebook.com/cityart.artes" target="_blank">
                     <i class="fa fa-facebook-official text-warning"></i>
                 </a></li>
             </ul>
