@@ -7,12 +7,12 @@
 }
 
 if (ENVIRONMENT === 'development') {
-    $file = rtrim(base_url(), '/') . ':4040/';
-    $file_headers = @get_headers($file);
+    $bsHost     = rtrim(base_url(), '/') . ':3000/';
+    $getHeaders = @get_headers($bsHost);
 
-    if ($file_headers) { ?>
+    if ($getHeaders) { ?>
         <script id="__bs_script__">
-            document.write('<script async src="http://HOST:4040/browser-sync/browser-sync-client.js?v=2.8.16"><\/script>'.replace('HOST', location.hostname));
+            document.write('<script async src="http://HOST:3000/browser-sync/browser-sync-client.js?v=2.18.6"><\/script>'.replace('HOST', location.hostname));
         </script>
     <?php }
 } ?>
