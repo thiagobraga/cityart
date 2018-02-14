@@ -62,6 +62,17 @@ services:
         - frontend
         - backend
 
+  ### Node Container #######################################
+    node:
+      build:
+        context: ./docker/node
+      network_mode: host
+      ports:
+        - 3000:3000
+      volumes:
+        - ./:/var/www
+      tty: false
+
   ### PHP-FPM Container #######################################
     php-fpm:
       build:

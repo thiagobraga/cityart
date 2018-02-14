@@ -77,6 +77,7 @@ gulp.task('browser-sync', function () {
     logPrefix:  'CityArt',
     host:       'local.cityart.com.br',
     files:      bsFiles,
+    port:       3001,
     open:       false,
     notify:     false,
     ui:         false,
