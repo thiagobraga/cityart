@@ -19,14 +19,15 @@
  *
  */
 switch ($_SERVER['SERVER_NAME']) {
-case 'cityart.com.br':
-    define('ENVIRONMENT', 'production');
-break;
-case 'cityart.thiagobraga.org':
-    define('ENVIRONMENT', 'testing');
-break;
-default:
-    define('ENVIRONMENT', 'development');
+    case 'cityart.com.br':
+    case 'www.cityart.com.br':
+        define('ENVIRONMENT', 'production');
+    break;
+    case 'cityart.thiagobraga.org':
+        define('ENVIRONMENT', 'testing');
+    break;
+    default:
+        define('ENVIRONMENT', 'development');
 }
 
 /**
@@ -39,17 +40,17 @@ default:
  */
 if (defined('ENVIRONMENT')) {
     switch (ENVIRONMENT) {
-    case 'development':
-        error_reporting(E_ALL);
-    break;
+        case 'development':
+            error_reporting(E_ALL);
+        break;
 
-    case 'testing':
-    case 'production':
-        error_reporting(0);
-    break;
+        case 'testing':
+        case 'production':
+            error_reporting(0);
+        break;
 
-    default:
-        exit('The application environment is not set correctly.');
+        default:
+            exit('The application environment is not set correctly.');
     }
 }
 
