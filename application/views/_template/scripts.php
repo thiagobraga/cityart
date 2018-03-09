@@ -6,13 +6,8 @@
     <?php }
 }
 
-if (ENVIRONMENT === 'development') {
-    $file = rtrim(base_url(), '/') . ':4040/';
-    $file_headers = @get_headers($file);
-
-    if ($file_headers) { ?>
-        <script id="__bs_script__">
-            document.write('<script async src="http://HOST:4040/browser-sync/browser-sync-client.js?v=2.8.16"><\/script>'.replace('HOST', location.hostname));
-        </script>
-    <?php }
-} ?>
+if (ENVIRONMENT === 'development' && @get_headers("http://{$_SERVER['REMOTE_ADDR']}:3001")) { ?>
+    <script id="__bs_script__">
+        document.write('<script async src="http://127.0.0.1:3001/browser-sync/browser-sync-client.js?v=2.18.6"><\/script>'.replace('HOST', location.hostname));
+    </script>
+<?php } ?>

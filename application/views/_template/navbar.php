@@ -29,10 +29,10 @@
                 <li><a href="mailto:contato@cityart.com.br" target="_blank">
                     <i class="fa fa-envelope text-warning"></i>
                 </a></li>
-                <li><a href="tel:+14997774155" target="_blank">
+                <li rel="tooltip" title="Enviar mensagem pelo WhatsApp"><a href="https://web.whatsapp.com/send?phone=+5514997774155&text=Olá,%20gostaria%20de%20solicitar%20um%20orçamento." target="_blank">
                     <i class="ionicons ion-social-whatsapp text-warning"></i>
                 </a></li>
-                <li><a href="http://facebook.com/cityart.artesgraficas" target="_blank">
+                <li><a href="https://www.facebook.com/cityart.artes" target="_blank">
                     <i class="fa fa-facebook-official text-warning"></i>
                 </a></li>
             </ul>
