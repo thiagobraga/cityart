@@ -6,7 +6,6 @@ const gulp     = require('gulp'),
   concat       = require('gulp-concat'),
   rename       = require('gulp-rename'),
   imagemin     = require('gulp-imagemin'),
-  pngquant     = require('imagemin-pngquant'),
   browserSync  = require('browser-sync'),
 
   images = {
@@ -76,9 +75,9 @@ gulp.task('scripts', function () {
 gulp.task('browser-sync', function () {
   browserSync.init({
     logPrefix:  'CityArt',
-    host:       'cityart',
+    host:       'local.cityart.com.br',
     files:      bsFiles,
-    port:       4040,
+    port:       3001,
     open:       false,
     notify:     false,
     ui:         false,
