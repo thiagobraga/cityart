@@ -11,11 +11,8 @@
 git clone git@github.com:thiagobraga/cityart.git
 cd cityart
 cp .env.example .env
-```
 
-Editar o arquivo `.env` com informações necessárias por ambiente, como usuário e senha do banco, portas específicas por serviço, etc. Em seguida:
-
-```
+# Editar o arquivo `.env` com informações necessárias para seu ambiente
 docker-compose up
 ```
 
