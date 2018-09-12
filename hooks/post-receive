@@ -35,7 +35,7 @@ esac
 
 # 2. Definindo variáveis do projeto
 # ===================================================
-PROJECT=$(echo $PWD | awk -F'/' '{ print $NF }' | cut -d "." -f1)
+PROJECT=$(echo $PWD | awk -F'/' '{ print $(NF-1) }')
 PROJECT_PATH="/home/ubuntu/projetos/$PROJECT"
 BARE_REPOSITORY="${PROJECT_PATH}/.git"
 
