@@ -36,8 +36,8 @@ esac
 # 2. Definindo variáveis do projeto
 # ===================================================
 PROJECT=$(echo $PWD | awk -F'/' '{ print $NF }' | cut -d "." -f1)
-PROJECT_PATH="/var/www/$PROJECT"
-BARE_REPOSITORY="${PROJECT_PATH}.git"
+PROJECT_PATH="/home/ubuntu/projetos/$PROJECT"
+BARE_REPOSITORY="${PROJECT_PATH}/.git"
 
 
 # 3. Clone ou pull do repositório
@@ -61,6 +61,8 @@ fi
 cd "$PROJECT_PATH/$BRANCH" || exit
 
 export COMPOSE_IGNORE_ORPHANS=1
+
+[ ! -e .env ] && cp .env.example .env
 
 # Pára os containers somente se estiverem rodando.
 docker ps | grep cityart >/dev/null && \
