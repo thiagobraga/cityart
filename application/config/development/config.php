@@ -246,7 +246,7 @@ $config['encryption_key'] = 'dcf6865935a444271cb1fce7006a5a6b';
 | 'sess_time_to_update'     = how many seconds between CI refreshing Session Information
 |
 */
-$config['sess_cookie_name']     = 'barpedia';
+$config['sess_cookie_name']     = 'cityart';
 $config['sess_expiration']      = 7200;
 $config['sess_expire_on_close'] = true;
 $config['sess_encrypt_cookie']  = false;
@@ -267,16 +267,10 @@ $config['sess_time_to_update']  = 300;
 | 'cookie_secure' =  Cookies will only be set if a secure HTTPS connection exists.
 |
 */
-if (ENVIRONMENT == 'production') {
-    $config['cookie_prefix']    = 'dev_';
-    $config['cookie_domain']    = 'dev.barpedia.org';
-} else {
-    $config['cookie_prefix']    = 'local_';
-    $config['cookie_domain']    = 'local.barpedia.org';
-}
-
-$config['cookie_path']      = '/';
-$config['cookie_secure']    = false;
+$config['cookie_prefix'] = 'dev_';
+$config['cookie_domain'] = 'cityart.com.br';
+$config['cookie_path']   = '/';
+$config['cookie_secure'] = false;
 
 /*
 |--------------------------------------------------------------------------
