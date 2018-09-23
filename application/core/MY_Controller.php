@@ -71,7 +71,7 @@ class MY_Controller extends CI_Controller
         self::loadAssets([
             'assets/css/dist/styles.css',
             'assets/js/dist/scripts.js'
-        ], false);
+        ], ENVIRONMENT === 'production');
     }
 
     /**
