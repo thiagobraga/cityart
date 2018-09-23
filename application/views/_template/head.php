@@ -1,6 +1,6 @@
 <head>
     <meta charset="utf-8" />
-    <meta name="author" content="Instituto Soma" />
+    <meta name="author" content="Thiago Braga" />
     <meta name="robots" content="index, follow" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
     <meta name="google-site-verification" content="yztVWnFLPo4PYGdbvfjgn7TfZgRETzwCG4j8p7ICODI" />
