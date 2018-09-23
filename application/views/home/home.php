@@ -8,6 +8,6 @@
     </div>
 
     <div>
-        <img src="assets/images/dist/photos/apresentacao.jpg" class="grid-image image-shadow" />
+        <img src="assets/images/photos/apresentacao.jpg" class="grid-image image-shadow" />
     </div>
 </div>

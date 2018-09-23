@@ -10,7 +10,7 @@
     </div>
 
     <div>
-        <img src="assets/images/dist/photos/assessoria.jpg" class="grid-image image-shadow" />
+        <img src="assets/images/photos/assessoria.jpg" class="grid-image image-shadow" />
     </div>
 </div>
 
@@ -18,7 +18,7 @@
 
 <div class="content-wrapper">
     <div>
-        <img src="assets/images/dist/photos/fluxo.png" class="grid-image" />
+        <img src="assets/images/photos/fluxo.png" class="grid-image" />
     </div>
 
     <div class="text-justify">
@@ -54,7 +54,7 @@
     </div>
 
     <div>
-        <img src="assets/images/dist/photos/processos.png" class="grid-image" />
+        <img src="assets/images/photos/processos.png" class="grid-image" />
 
         <p class="lead text-center">
             <b>TUDO QUE VOCÊ PRECISA É DE UM PRIMEIRO PASSO!</b><br/>
