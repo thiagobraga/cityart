@@ -6,9 +6,9 @@
             <span class="footer-phone"><i class="fa fa-phone"></i> 14 3206-7602</span>
             <span><i class="ionicons ion-social-whatsapp"></i> 14 99777-4155</span><br/>
 
-            <a href="mailto:contato@cityart.com.br">
-                <i class="fa fa-envelope"></i> contato@cityart.com.br
-            </a><br/>
+            <i class="fa fa-envelope"></i>
+            <a href="mailto:contato@cityart.com.br">contato@cityart.com.br</a>
+            <br/>
 
             Bauru/SP
         </div>
