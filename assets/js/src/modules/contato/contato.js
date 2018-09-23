@@ -1,4 +1,5 @@
-$(() => {
+$(function () {
+
   // Noty Defaults
   $.noty.defaults.layout  = 'topRight';
   $.noty.defaults.theme   = 'bootstrapTheme';
@@ -34,7 +35,7 @@ $(() => {
         email:   email.val(),
         message: message.val()
       }
-    }).done(response => {
+    }).done(function (response) {
       if (response) {
         noty({
           text: 'Seu e-mail foi enviado com sucesso.',
@@ -47,20 +48,21 @@ $(() => {
           type: 'error'
         });
       }
-    }).fail(() => {
+    }).fail(function () {
       noty({
         text: 'Ocorreu um erro no envio do seu e-mail. Tente novamente mais tarde.',
         type: 'error'
       });
-    }).always(() => {
+    }).always(function () {
       btn.removeClass('disabled');
       btn.find('.email-icon').removeClass('hidden');
       btn.find('.loading-icon').addClass('hidden');
     });
   }
 
-  $('#send').on('click', event => {
+  $('#send').on('click', function (event) {
     event.preventDefault();
     sendEmail(event);
   });
+
 });
