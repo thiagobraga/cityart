@@ -33,6 +33,7 @@ BARE_REPOSITORY="${PROJECT_PATH}/.git"
 # então é executado um git pull do branch atual.
 if [ ! -d "$PROJECT_PATH/$BRANCH" ]; then
   git clone $BARE_REPOSITORY -b "$BRANCH" "$PROJECT_PATH/$BRANCH"
+  cd "$PROJECT_PATH/$BRANCH" || exit
 else
   cd "$PROJECT_PATH/$BRANCH" || exit
   unset GIT_DIR
@@ -41,6 +42,8 @@ fi
 
 # 4. Deploy do projeto
 # ===================================================
-cd "$PROJECT_PATH/$BRANCH" || exit
+export NODE_VERSION=8.12.0
+. $HOME/.nvm/nvm.sh
+nvm use $NODE_VERSION
 npm i
 gulp production
