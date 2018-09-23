@@ -1,26 +1,9 @@
 #!/bin/bash
 
-echo '==============================================='
-echo 'Testando versão do node e npm'
-echo '==============================================='
-echo ''
+echo '===================================='
+echo 'Instalando projeto'
+echo '===================================='
 
-node -v
-npm -v
-
-echo ''
-echo '==============================================='
-echo 'Instalação dos pacotes do projeto'
-echo '==============================================='
-echo ''
-
-npm i -g gulp
+export PATH=~/.npm-global/bin:$PATH
 npm i
-
-echo ''
-echo '==============================================='
-echo "Executando no ambiente de desenvolvimento"
-echo '==============================================='
-echo ''
-
 gulp
