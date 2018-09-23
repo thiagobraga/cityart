@@ -10,7 +10,7 @@
             </button>
 
             <!-- Navbar header -->
-            <a href="<?php echo base_url() ?>" class="navbar-brand"></a>
+            <a href="/" class="navbar-brand"></a>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
@@ -18,7 +18,7 @@
             <ul class="nav navbar-nav">
                 <?php foreach ($modules as $module) { ?>
                     <li class="navbar-<?php echo $module[1]; if (isset($module[3])) echo ' active' ?>">
-                        <a href="<?php echo base_url($module[0]) ?>">
+                        <a href="/<?php echo $module[0] ?>">
                             <?php echo $module[2] ?>
                         </a>
                     </li>
