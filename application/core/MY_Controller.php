@@ -4,7 +4,7 @@ defined('BASEPATH') || exit('No direct script access allowed');
 
 /**
  * MY_Controller
- * @author Thiago Braga <thiago@institutosoma.org.br>
+ * @author Thiago Braga <contato@thiagobraga.org>
  * @access public
  * @version 1.0
  */

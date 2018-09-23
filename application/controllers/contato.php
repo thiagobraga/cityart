@@ -85,7 +85,7 @@ class Contato extends MY_Controller
 
         // Header
         $to = (ENVIRONMENT === 'development')
-            ? ['Thiago Braga <thibraga06@gmail.com>']
+            ? ['Thiago Braga <contato@thiagobraga.org>']
             : ['CityArt <contato@cityart.com.br>'];
 
         $this->email->clear();
