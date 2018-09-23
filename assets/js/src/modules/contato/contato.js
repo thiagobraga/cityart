@@ -1,9 +1,4 @@
-// JSHint
-/* global noty */
-
-$(function () {
-  'use strict';
-
+$(() => {
   // Noty Defaults
   $.noty.defaults.layout  = 'topRight';
   $.noty.defaults.theme   = 'bootstrapTheme';
@@ -39,7 +34,7 @@ $(function () {
         email:   email.val(),
         message: message.val()
       }
-    }).done(function (response) {
+    }).done(response => {
       if (response) {
         noty({
           text: 'Seu e-mail foi enviado com sucesso.',
@@ -52,19 +47,19 @@ $(function () {
           type: 'error'
         });
       }
-    }).fail(function () {
+    }).fail(() => {
       noty({
         text: 'Ocorreu um erro no envio do seu e-mail. Tente novamente mais tarde.',
         type: 'error'
       });
-    }).always(function () {
+    }).always(() => {
       btn.removeClass('disabled');
       btn.find('.email-icon').removeClass('hidden');
       btn.find('.loading-icon').addClass('hidden');
     });
   }
 
-  $('#send').on('click', function (event) {
+  $('#send').on('click', event => {
     event.preventDefault();
     sendEmail(event);
   });

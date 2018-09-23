@@ -1,9 +1,6 @@
-$(function () {
-  'use strict';
-
+$(() => {
   var options,
-    thumbnails = $('#thumbnails'),
-    carousel = $('#carousel');
+    thumbnails = $('#thumbnails');
 
   if (thumbnails.length) {
     options = {
@@ -20,7 +17,7 @@ $(function () {
 
     thumbnails.flexslider(options);
 
-    carousel.flexslider({
+    $('#carousel').flexslider({
       animation:     'slide',
       animationLoop: true,
       directionNav:  false,
