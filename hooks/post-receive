@@ -1,27 +1,15 @@
 #!/bin/bash
 
-
-# ===================================================
-# CityArt Deploy Script
-# ===================================================
-#
-# 1. Ignorando a execução deste script
-# 2. Definindo variáveis do projeto
-# 3. Clone ou pull do repositório
-# 4. Deploy do projeto
-
-
 # 1. Ignorando a execução deste script
 # ===================================================
-# Ao realizar um push, alguns parâmetros do Git são enviados para este
-# script via stdin. Este script não deve ser executado sempre, então
-# utilizamos estes parâmetros para detectar o branch atual e forçar a
-# saída do script quando estamos:
+# Ao realizar um push, alguns parâmetros do Git são enviados para este script
+# via stdin. Este script não deve ser executado sempre, então estes parâmetros
+# são utilizados para detectar o branch atual e forçar a saída do script quando:
 #
-# - criando tags no formato 0.0.0-0 detectadas via REGEX;
-# - fazendo push em branchs que começam com feature, bugfix e hotfix;
-# - fazendo push em stage e develop
-# - deletando branchs remotos, identificados pelo hash 0 repetido 40 vezes.
+# - está criando tags no formato 0.0.0-0 detectadas via REGEX;
+# - está fazendo push em branchs que começam com feature, bugfix e hotfix;
+# - está fazendo push em stage e develop
+# - está deletando branchs remotos, identificados pelo hash 0 repetido 40 vezes.
 read -r OLDREV NEWREV REFNAME
 [[ $NEWREV =~ "0{40}" ]] && exit
 BRANCH=$(git rev-parse --symbolic --abbrev-ref "$REFNAME")
@@ -32,42 +20,27 @@ case $BRANCH in
   stage|develop|feature*|bugfix*|hotfix*) exit;;
 esac
 
-
 # 2. Definindo variáveis do projeto
 # ===================================================
 PROJECT=$(echo $PWD | awk -F'/' '{ print $(NF-1) }')
 PROJECT_PATH="/home/ubuntu/projetos/$PROJECT"
 BARE_REPOSITORY="${PROJECT_PATH}/.git"
 
-
 # 3. Clone ou pull do repositório
 # ===================================================
-# Verificamos se existe a pasta para o branch atual deste projeto.
-# Se não existe, clonamos o repositório e acessamos a pasta.
-# Se o mesmo já existe, acessamos a pasta e executamos um pull do branch atual.
+# Verifica-se a existência da pasta para o branch atual deste projeto. Caso não
+# exista, o repositório é clonado, e se o mesmo já existe, a pasta é acessada,
+# então é executado um git pull do branch atual.
 if [ ! -d "$PROJECT_PATH/$BRANCH" ]; then
   git clone $BARE_REPOSITORY -b "$BRANCH" "$PROJECT_PATH/$BRANCH"
 else
   cd "$PROJECT_PATH/$BRANCH" || exit
   unset GIT_DIR
-  git checkout -f "$BRANCH"
-  git pull origin "$BRANCH"
+  git checkout -f "$BRANCH" && git pull origin "$BRANCH"
 fi
-
 
 # 4. Deploy do projeto
 # ===================================================
-
 cd "$PROJECT_PATH/$BRANCH" || exit
-
-export COMPOSE_IGNORE_ORPHANS=1
-
-[ ! -e .env ] && cp .env.example .env
-
-# Pára os containers somente se estiverem rodando.
-docker ps | grep cityart >/dev/null && \
-  docker-compose -p cityart \
-  stop workspace php-fpm nginx node
-
-docker-compose -p cityart build
-docker-compose -p cityart up -d workspace php-fpm nginx node
+npm i
+gulp production
