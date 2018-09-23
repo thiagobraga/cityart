@@ -1,8 +1,18 @@
 {
   "name": "cityart",
-  "version": "0.0.8",
+  "version": "0.1.0",
   "description": "Site da empresa CityArt Artes Gráficas | Design & Pré-Impressão",
+  "author": "Thiago Braga <contato@thiagobraga.org>",
   "main": "index.php",
+  "license": "ISC",
+  "homepage": "http://cityart.com.br",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thiagobraga/cityart.com.br"
+  },
+  "bugs": {
+    "url": "https://github.com/thiagobraga/cityart.com.br/issues"
+  },
   "dependencies": {
     "angular": "1.5.7",
     "bootstrap-sass": "3.3.7",
@@ -13,45 +23,13 @@
     "ngmap": "1.17.1",
     "noty": "2.4.0"
   },
-  "scripts": {
-    "start": "gulp"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/thiagobraga/cityart.git"
-  },
-  "keywords": [
-    "design",
-    "bauru",
-    "artes",
-    "gráficas",
-    "arte",
-    "final",
-    "panfletos",
-    "cartazes",
-    "banners",
-    "cartões",
-    "envelopes",
-    "papelaria",
-    "identidade",
-    "visual"
-  ],
-  "author": "Thiago Braga <contato@thiagobraga.org>",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/thiagobraga/cityart/issues"
-  },
-  "homepage": "http://cityart.com.br",
   "devDependencies": {
     "browser-sync": "^2.24.7",
-    "gulp": "^3.9.1",
+    "gulp": "^4.0.0",
     "gulp-autoprefixer": "^6.0.0",
-    "gulp-changed": "^3.2.0",
     "gulp-concat": "^2.6.1",
-    "gulp-imagemin": "^4.1.0",
     "gulp-rename": "^1.4.0",
     "gulp-sass": "^4.0.1",
-    "gulp-uglify": "^3.0.1",
-    "imagemin-pngquant": "^6.0.0"
+    "gulp-uglify": "^3.0.1"
   }
 }

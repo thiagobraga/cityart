@@ -8,11 +8,8 @@
 ## Instalação
 
 ```
-git clone git@github.com:thiagobraga/cityart.git
-cd cityart
-cp .env.example .env
-
-# Editar o arquivo `.env` com informações necessárias para seu ambiente
+git clone git@github.com:thiagobraga/cityart.com.br
+cd cityart.com.br
 docker-compose up
 ```
 

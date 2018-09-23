@@ -1,8 +1,11 @@
-FROM    node:8.9.1
+FROM node:8.12.0-alpine
 
 WORKDIR /var/www
-ADD     run.sh /run.sh
-RUN     chmod -v +x /run.sh
-EXPOSE  3001
+EXPOSE 3001
+USER node
+RUN mkdir ~/.npm-global \
+  && npm config set prefix '~/.npm-global' \
+  && export PATH=~/.npm-global/bin:$PATH \
+  && npm i -g gulp@next
 
-CMD     ["/run.sh"]
+CMD ["sh", "/var/www/docker/node/run.sh"]

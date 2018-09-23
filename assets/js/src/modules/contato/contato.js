@@ -1,8 +1,4 @@
-// JSHint
-/* global noty */
-
 $(function () {
-  'use strict';
 
   // Noty Defaults
   $.noty.defaults.layout  = 'topRight';
@@ -68,4 +64,5 @@ $(function () {
     event.preventDefault();
     sendEmail(event);
   });
+
 });
