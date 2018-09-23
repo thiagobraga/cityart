@@ -8,7 +8,7 @@
     </div>
 
     <div>
-        <img src="assets/images/dist/photos/processo-criativo.jpg" class="grid-image image-shadow" />
+        <img src="assets/images/photos/processo-criativo.jpg" class="grid-image image-shadow" />
     </div>
 </div>
 
@@ -17,7 +17,7 @@
         <div id="thumbnails" class="thumbnails-wrapper">
             <ul class="slides">
                 <?php foreach ($carousel as $key => $item) { ?>
-                    <li><img src="assets/images/dist/carousel/icon-<?php echo $item[0] ?>.jpg" alt="<?php echo $item[1] ?>" /></li>
+                    <li><img src="assets/images/carousel/icon-<?php echo $item[0] ?>.jpg" alt="<?php echo $item[1] ?>" /></li>
                 <?php } ?>
             </ul>
         </div>
@@ -26,7 +26,7 @@
     <div id="carousel" class="flexslider carousel">
         <ul class="slides">
             <?php foreach ($carousel as $key => $item) { ?>
-                <li><img src="assets/images/dist/carousel/portfolio-<?php echo $item[0] ?>.png" alt="<?php echo $item[1] ?>" /></li>
+                <li><img src="assets/images/carousel/portfolio-<?php echo $item[0] ?>.png" alt="<?php echo $item[1] ?>" /></li>
             <?php } ?>
         </ul>
     </div>
