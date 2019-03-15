@@ -15,7 +15,7 @@
   },
   "dependencies": {
     "angular": "1.5.7",
-    "bootstrap-sass": "3.3.7",
+    "bootstrap-sass": ">=3.4.1",
     "flexslider": "^2.6.3",
     "font-awesome": "4.7.0",
     "ionicons": "2.0.1",
