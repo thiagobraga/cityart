@@ -14,7 +14,7 @@
     "url": "https://github.com/thiagobraga/cityart.com.br/issues"
   },
   "dependencies": {
-    "angular": "1.6.9",
+    "angular": "1.8.0",
     "bootstrap-sass": ">=3.4.1",
     "flexslider": "^2.7.2",
     "font-awesome": "4.7.0",
